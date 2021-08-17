@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var textInputField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var reverseButton: UIButton!
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     private let buttonOn: CGFloat = 1
     private let buttonOff: CGFloat = 0.6
     let ReversingWords = ReversingWordsModel()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         textInputField.delegate = self
@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         changingTheButton()
     }
     
-//    MARK:- метод изменения кнопки
+    //    MARK:- метод изменения кнопки
     func changingTheButton() {
         
         switch reverseButton.titleLabel?.text {
@@ -68,13 +68,13 @@ class ViewController: UIViewController {
 }
 
 
-    //MARK:- Расширение для Text Field
+//MARK:- Расширение для Text Field
 extension ViewController: UITextFieldDelegate {
-
+    
     //MARK:- Скрытие клавиатуры по тапу за пределами клавиатуры
-override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-    super.touchesBegan(touches, with: event)
-    view.endEditing(true)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(true)
     }
     
     //MARK:- методы отслеживания ввода
