@@ -7,25 +7,18 @@
 
 import UIKit
 
-
 class ReversingWordsModel {
-    
-    
-    //MARK:- Метод производящий реверс
+    // MARK: - Метод производящий реверс
     func reverseWords (text: String) -> String {
-        
         let words = getWords(from: text)
         var reversedWordsArray = [String]()
-        
         for word in words {
             let reverse = String(word.reversed())
             reversedWordsArray.append(reverse)
         }
         let result = reversedWordsArray.joined(separator: " ")
-        
         return result
     }
-    
     private func getWords(from text: String) -> [Substring] {
         return text.split(separator: " ")
     }
@@ -36,8 +29,3 @@ extension StringProtocol {
         return split { !$0.isLetter }
     }
 }
-
-
-
-
-
