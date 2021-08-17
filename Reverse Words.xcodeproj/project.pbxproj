@@ -10,9 +10,12 @@
 		1A483D2F26CB3E6600B3B2A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A483D2E26CB3E6600B3B2A6 /* AppDelegate.swift */; };
 		1A483D3126CB3E6600B3B2A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A483D3026CB3E6600B3B2A6 /* SceneDelegate.swift */; };
 		1A483D3326CB3E6600B3B2A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A483D3226CB3E6600B3B2A6 /* ViewController.swift */; };
-		1A483D3626CB3E6600B3B2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A483D3426CB3E6600B3B2A6 /* Main.storyboard */; };
 		1A483D3826CB3E6600B3B2A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A483D3726CB3E6600B3B2A6 /* Assets.xcassets */; };
-		1A483D3B26CB3E6600B3B2A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A483D3926CB3E6600B3B2A6 /* LaunchScreen.storyboard */; };
+		1A483D4626CB3F9900B3B2A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A483D4526CB3F9900B3B2A6 /* LaunchScreen.storyboard */; };
+		1A483D4826CB3FB200B3B2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A483D4726CB3FB200B3B2A6 /* Main.storyboard */; };
+		1A483D4D26CB403300B3B2A6 /* SFProDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A483D4B26CB403300B3B2A6 /* SFProDisplay-Bold.ttf */; };
+		1A483D4E26CB403300B3B2A6 /* SFProDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1A483D4C26CB403300B3B2A6 /* SFProDisplay-Regular.ttf */; };
+		1A483D5026CB418800B3B2A6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A483D4F26CB418800B3B2A6 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +23,13 @@
 		1A483D2E26CB3E6600B3B2A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A483D3026CB3E6600B3B2A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1A483D3226CB3E6600B3B2A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1A483D3526CB3E6600B3B2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A483D3726CB3E6600B3B2A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1A483D3A26CB3E6600B3B2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A483D3C26CB3E6600B3B2A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A483D4526CB3F9900B3B2A6 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1A483D4726CB3FB200B3B2A6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1A483D4B26CB403300B3B2A6 /* SFProDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		1A483D4C26CB403300B3B2A6 /* SFProDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		1A483D4F26CB418800B3B2A6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,58 @@
 		1A483D2D26CB3E6600B3B2A6 /* Reverse Words */ = {
 			isa = PBXGroup;
 			children = (
-				1A483D2E26CB3E6600B3B2A6 /* AppDelegate.swift */,
-				1A483D3026CB3E6600B3B2A6 /* SceneDelegate.swift */,
-				1A483D3226CB3E6600B3B2A6 /* ViewController.swift */,
-				1A483D3426CB3E6600B3B2A6 /* Main.storyboard */,
-				1A483D3726CB3E6600B3B2A6 /* Assets.xcassets */,
-				1A483D3926CB3E6600B3B2A6 /* LaunchScreen.storyboard */,
-				1A483D3C26CB3E6600B3B2A6 /* Info.plist */,
+				1A483D4226CB3EF000B3B2A6 /* Models */,
+				1A483D4326CB3F0900B3B2A6 /* View */,
+				1A483D4426CB3F2400B3B2A6 /* Controller */,
+				1A483D4926CB3FCB00B3B2A6 /* Support */,
 			);
 			path = "Reverse Words";
+			sourceTree = "<group>";
+		};
+		1A483D4226CB3EF000B3B2A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A483D4F26CB418800B3B2A6 /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1A483D4326CB3F0900B3B2A6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A483D4726CB3FB200B3B2A6 /* Main.storyboard */,
+				1A483D4526CB3F9900B3B2A6 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1A483D4426CB3F2400B3B2A6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1A483D3226CB3E6600B3B2A6 /* ViewController.swift */,
+				1A483D2E26CB3E6600B3B2A6 /* AppDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1A483D4926CB3FCB00B3B2A6 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				1A483D4A26CB401B00B3B2A6 /* Fonts */,
+				1A483D3726CB3E6600B3B2A6 /* Assets.xcassets */,
+				1A483D3C26CB3E6600B3B2A6 /* Info.plist */,
+				1A483D3026CB3E6600B3B2A6 /* SceneDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		1A483D4A26CB401B00B3B2A6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1A483D4B26CB403300B3B2A6 /* SFProDisplay-Bold.ttf */,
+				1A483D4C26CB403300B3B2A6 /* SFProDisplay-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +173,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A483D3B26CB3E6600B3B2A6 /* LaunchScreen.storyboard in Resources */,
+				1A483D4826CB3FB200B3B2A6 /* Main.storyboard in Resources */,
 				1A483D3826CB3E6600B3B2A6 /* Assets.xcassets in Resources */,
-				1A483D3626CB3E6600B3B2A6 /* Main.storyboard in Resources */,
+				1A483D4626CB3F9900B3B2A6 /* LaunchScreen.storyboard in Resources */,
+				1A483D4E26CB403300B3B2A6 /* SFProDisplay-Regular.ttf in Resources */,
+				1A483D4D26CB403300B3B2A6 /* SFProDisplay-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,29 +191,11 @@
 				1A483D3326CB3E6600B3B2A6 /* ViewController.swift in Sources */,
 				1A483D2F26CB3E6600B3B2A6 /* AppDelegate.swift in Sources */,
 				1A483D3126CB3E6600B3B2A6 /* SceneDelegate.swift in Sources */,
+				1A483D5026CB418800B3B2A6 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		1A483D3426CB3E6600B3B2A6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A483D3526CB3E6600B3B2A6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		1A483D3926CB3E6600B3B2A6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A483D3A26CB3E6600B3B2A6 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1A483D3D26CB3E6600B3B2A6 /* Debug */ = {
@@ -288,7 +321,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2TFP9B86SX;
-				INFOPLIST_FILE = "Reverse Words/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Reverse Words/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +340,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2TFP9B86SX;
-				INFOPLIST_FILE = "Reverse Words/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Reverse Words/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="00Z-9d-Q68">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Light.otf">
+            <string>SFProDisplay-Light</string>
+        </array>
+        <array key="SFProDisplay-Bold.ttf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SFProDisplay-Regular.ttf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Reverse Words-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Reverse_Words" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLU-Rl-lPq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This application will reverse your words. Please type text below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tut-3I-kp2">
+                                        <rect key="frame" x="6.3333333333333428" y="209" width="362.33333333333326" height="43.666666666666657"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="100"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text to reverse" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9UR-De-VhA">
+                                        <rect key="frame" x="16" y="311.66666666666669" width="343" height="24"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldPressed" destination="BYZ-38-t0r" eventType="editingChanged" id="lwa-Mm-CxE"/>
+                                        </connections>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1V-bh-tR0">
+                                        <rect key="frame" x="16" y="351.66666666666669" width="343" height="1"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="Y8n-eF-yUY"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wj1-pw-Tmh">
+                                        <rect key="frame" x="16" y="690" width="343" height="56"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="17"/>
+                                        <state key="normal" title="Reverse">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="reverseButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="aio-56-GCV"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse Words" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qJq-aX-FgI">
+                                        <rect key="frame" x="80.666666666666671" y="152" width="213.66666666666663" height="41"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="200"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Is Hiden Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ejm-df-BMR">
+                                        <rect key="frame" x="16" y="377.33333333333331" width="343" height="28"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="100"/>
+                                        <color key="textColor" systemColor="systemBlueColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Tut-3I-kp2" firstAttribute="height" secondItem="qJq-aX-FgI" secondAttribute="height" constant="3" id="0DO-c3-XkY"/>
+                                    <constraint firstItem="qJq-aX-FgI" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.570048" id="3Rk-hx-WC4"/>
+                                    <constraint firstItem="qJq-aX-FgI" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="BcK-8h-mhq"/>
+                                    <constraint firstItem="Wj1-pw-Tmh" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0689655" id="BmN-Z0-mFL"/>
+                                    <constraint firstItem="Tut-3I-kp2" firstAttribute="top" secondItem="qJq-aX-FgI" secondAttribute="bottom" constant="16" id="CVP-4w-6su"/>
+                                    <constraint firstItem="Wj1-pw-Tmh" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="Chs-gt-mQX"/>
+                                    <constraint firstItem="9UR-De-VhA" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="HMZ-y8-8D4"/>
+                                    <constraint firstItem="9UR-De-VhA" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0270936" constant="1.9999968000000017" id="Ibk-Ca-mF8"/>
+                                    <constraint firstItem="B1V-bh-tR0" firstAttribute="top" secondItem="9UR-De-VhA" secondAttribute="bottom" constant="16.000000000000057" id="O0C-Ud-miO"/>
+                                    <constraint firstItem="Tut-3I-kp2" firstAttribute="centerX" secondItem="qJq-aX-FgI" secondAttribute="centerX" id="R4B-43-0nN"/>
+                                    <constraint firstItem="Wj1-pw-Tmh" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.914667" id="Rwh-eK-QL1"/>
+                                    <constraint firstAttribute="trailing" secondItem="B1V-bh-tR0" secondAttribute="trailing" constant="16" id="X3C-xe-pny"/>
+                                    <constraint firstItem="B1V-bh-tR0" firstAttribute="leading" secondItem="MLU-Rl-lPq" secondAttribute="leading" constant="16" id="XXA-QO-L3I"/>
+                                    <constraint firstItem="ejm-df-BMR" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0270936" constant="5.9999968000000017" id="YSL-KH-u9K"/>
+                                    <constraint firstItem="9UR-De-VhA" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.914667" id="awW-Ay-ilT"/>
+                                    <constraint firstItem="Tut-3I-kp2" firstAttribute="width" secondItem="qJq-aX-FgI" secondAttribute="width" multiplier="1.61864" constant="16" id="jX5-U1-N7j"/>
+                                    <constraint firstItem="qJq-aX-FgI" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0503686" id="jxo-Jy-Imt"/>
+                                    <constraint firstItem="ejm-df-BMR" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.914667" id="oJ1-gO-4dn"/>
+                                    <constraint firstItem="ejm-df-BMR" firstAttribute="top" secondItem="B1V-bh-tR0" secondAttribute="bottom" constant="24.5" id="rFZ-qE-fLo"/>
+                                    <constraint firstAttribute="bottom" secondItem="Wj1-pw-Tmh" secondAttribute="bottom" constant="66" id="rsy-ha-wKj"/>
+                                    <constraint firstItem="qJq-aX-FgI" firstAttribute="top" secondItem="MLU-Rl-lPq" secondAttribute="top" constant="152" id="ryj-Cf-Yfb"/>
+                                    <constraint firstItem="9UR-De-VhA" firstAttribute="top" secondItem="Tut-3I-kp2" secondAttribute="bottom" constant="59" id="uF9-Ih-OhV"/>
+                                    <constraint firstItem="Tut-3I-kp2" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="wqv-c3-XyL"/>
+                                    <constraint firstItem="ejm-df-BMR" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="yAf-pM-RNr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MLU-Rl-lPq" secondAttribute="trailing" id="4By-NU-OhG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="MLU-Rl-lPq" secondAttribute="top" constant="88" id="MFY-p2-wfx"/>
+                            <constraint firstItem="MLU-Rl-lPq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="YMc-Vi-z2i"/>
+                            <constraint firstItem="MLU-Rl-lPq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mmj-mQ-PdR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Reverse Words" id="Qm8-Lc-7aY"/>
+                    <connections>
+                        <outlet property="lineUnderTextField" destination="B1V-bh-tR0" id="ggR-Ir-e90"/>
+                        <outlet property="resultLabel" destination="ejm-df-BMR" id="kLU-KQ-WWT"/>
+                        <outlet property="reverseButton" destination="Wj1-pw-Tmh" id="yOv-qa-Dzr"/>
+                        <outlet property="textInputField" destination="9UR-De-VhA" id="0bn-jg-wGU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="936.79999999999995" y="70.197044334975374"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZFF-JN-2QI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="00Z-9d-Q68" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <value key="contentSizeForViewInPopover" type="size" width="0.0" height="0.0"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="R4L-ny-bkS">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ohd-Jx-UG2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xab-Ew-gXM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="70.982142857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
