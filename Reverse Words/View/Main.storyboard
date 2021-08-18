@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="00Z-9d-Q68">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -24,20 +24,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Reverse_Words" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLU-Rl-lPq">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                                <rect key="frame" x="0.0" y="-44" width="320" height="558"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This application will reverse your words. Please type text below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tut-3I-kp2">
-                                        <rect key="frame" x="6.3333333333333428" y="209" width="362.33333333333326" height="43.666666666666657"/>
-                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="100"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text to reverse" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9UR-De-VhA">
-                                        <rect key="frame" x="16" y="311.66666666666669" width="343" height="24"/>
+                                        <rect key="frame" x="11" y="285" width="293" height="22"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
@@ -45,14 +39,14 @@
                                         </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1V-bh-tR0">
-                                        <rect key="frame" x="16" y="351.66666666666669" width="343" height="1"/>
+                                        <rect key="frame" x="13" y="318" width="288" height="1"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="Y8n-eF-yUY"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wj1-pw-Tmh">
-                                        <rect key="frame" x="16" y="690" width="343" height="56"/>
+                                        <rect key="frame" x="13.5" y="453.5" width="293" height="38.5"/>
                                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="17"/>
                                         <state key="normal" title="Reverse">
@@ -63,43 +57,52 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse Words" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qJq-aX-FgI">
-                                        <rect key="frame" x="80.666666666666671" y="152" width="213.66666666666663" height="41"/>
+                                        <rect key="frame" x="69" y="152" width="182" height="28"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="200"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Is Hiden Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ejm-df-BMR">
-                                        <rect key="frame" x="16" y="377.33333333333331" width="343" height="28"/>
+                                        <rect key="frame" x="11" y="343.5" width="293" height="26"/>
                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="100"/>
                                         <color key="textColor" systemColor="systemBlueColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This application will reverse your words. Please type text below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tut-3I-kp2">
+                                        <rect key="frame" x="5" y="196" width="309.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="100"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Tut-3I-kp2" firstAttribute="height" secondItem="qJq-aX-FgI" secondAttribute="height" constant="3" id="0DO-c3-XkY"/>
                                     <constraint firstItem="qJq-aX-FgI" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.570048" id="3Rk-hx-WC4"/>
                                     <constraint firstItem="qJq-aX-FgI" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="BcK-8h-mhq"/>
                                     <constraint firstItem="Wj1-pw-Tmh" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0689655" id="BmN-Z0-mFL"/>
+                                    <constraint firstItem="9UR-De-VhA" firstAttribute="top" secondItem="Tut-3I-kp2" secondAttribute="bottom" constant="58.999999999999972" id="CJM-V1-HE0">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="43"/>
+                                    </constraint>
                                     <constraint firstItem="Tut-3I-kp2" firstAttribute="top" secondItem="qJq-aX-FgI" secondAttribute="bottom" constant="16" id="CVP-4w-6su"/>
                                     <constraint firstItem="Wj1-pw-Tmh" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="Chs-gt-mQX"/>
-                                    <constraint firstItem="9UR-De-VhA" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="HMZ-y8-8D4"/>
-                                    <constraint firstItem="9UR-De-VhA" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0270936" constant="1.9999968000000017" id="Ibk-Ca-mF8"/>
-                                    <constraint firstItem="B1V-bh-tR0" firstAttribute="top" secondItem="9UR-De-VhA" secondAttribute="bottom" constant="16.000000000000057" id="O0C-Ud-miO"/>
-                                    <constraint firstItem="Tut-3I-kp2" firstAttribute="centerX" secondItem="qJq-aX-FgI" secondAttribute="centerX" id="R4B-43-0nN"/>
+                                    <constraint firstItem="9UR-De-VhA" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" constant="-2.5" id="HMZ-y8-8D4"/>
+                                    <constraint firstItem="qJq-aX-FgI" firstAttribute="top" secondItem="MLU-Rl-lPq" secondAttribute="top" constant="152" id="Ho9-Og-PPG">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="100"/>
+                                    </constraint>
+                                    <constraint firstItem="9UR-De-VhA" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0270936" constant="6.8916240000000002" id="Ibk-Ca-mF8"/>
+                                    <constraint firstItem="B1V-bh-tR0" firstAttribute="top" secondItem="9UR-De-VhA" secondAttribute="bottom" constant="11" id="O0C-Ud-miO"/>
                                     <constraint firstItem="Wj1-pw-Tmh" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.914667" id="Rwh-eK-QL1"/>
-                                    <constraint firstAttribute="trailing" secondItem="B1V-bh-tR0" secondAttribute="trailing" constant="16" id="X3C-xe-pny"/>
-                                    <constraint firstItem="B1V-bh-tR0" firstAttribute="leading" secondItem="MLU-Rl-lPq" secondAttribute="leading" constant="16" id="XXA-QO-L3I"/>
-                                    <constraint firstItem="ejm-df-BMR" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0270936" constant="5.9999968000000017" id="YSL-KH-u9K"/>
+                                    <constraint firstAttribute="trailing" secondItem="B1V-bh-tR0" secondAttribute="trailing" constant="19" id="X3C-xe-pny"/>
+                                    <constraint firstItem="B1V-bh-tR0" firstAttribute="leading" secondItem="MLU-Rl-lPq" secondAttribute="leading" constant="13" id="XXA-QO-L3I"/>
+                                    <constraint firstItem="ejm-df-BMR" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0270936" constant="10.891624" id="YSL-KH-u9K"/>
                                     <constraint firstItem="9UR-De-VhA" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.914667" id="awW-Ay-ilT"/>
-                                    <constraint firstItem="Tut-3I-kp2" firstAttribute="width" secondItem="qJq-aX-FgI" secondAttribute="width" multiplier="1.61864" constant="16" id="jX5-U1-N7j"/>
                                     <constraint firstItem="qJq-aX-FgI" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0503686" id="jxo-Jy-Imt"/>
+                                    <constraint firstItem="Tut-3I-kp2" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.966222" id="miW-Ak-ero"/>
                                     <constraint firstItem="ejm-df-BMR" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.914667" id="oJ1-gO-4dn"/>
-                                    <constraint firstItem="ejm-df-BMR" firstAttribute="top" secondItem="B1V-bh-tR0" secondAttribute="bottom" constant="24.5" id="rFZ-qE-fLo"/>
+                                    <constraint firstItem="ejm-df-BMR" firstAttribute="top" secondItem="B1V-bh-tR0" secondAttribute="bottom" constant="24.333333333333371" id="rFZ-qE-fLo"/>
                                     <constraint firstAttribute="bottom" secondItem="Wj1-pw-Tmh" secondAttribute="bottom" constant="66" id="rsy-ha-wKj"/>
-                                    <constraint firstItem="qJq-aX-FgI" firstAttribute="top" secondItem="MLU-Rl-lPq" secondAttribute="top" constant="152" id="ryj-Cf-Yfb"/>
-                                    <constraint firstItem="9UR-De-VhA" firstAttribute="top" secondItem="Tut-3I-kp2" secondAttribute="bottom" constant="59" id="uF9-Ih-OhV"/>
-                                    <constraint firstItem="Tut-3I-kp2" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="wqv-c3-XyL"/>
-                                    <constraint firstItem="ejm-df-BMR" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="yAf-pM-RNr"/>
+                                    <constraint firstItem="Tut-3I-kp2" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0537767" id="wLe-4A-2F1"/>
+                                    <constraint firstItem="Tut-3I-kp2" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" constant="-0.33333333333334281" id="wqv-c3-XyL"/>
+                                    <constraint firstItem="ejm-df-BMR" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" constant="-2.5" id="yAf-pM-RNr"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -122,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="936.79999999999995" y="70.197044334975374"/>
+            <point key="canvasLocation" x="936.25" y="69.375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZFF-JN-2QI">
@@ -131,7 +134,7 @@
                     <toolbarItems/>
                     <value key="contentSizeForViewInPopover" type="size" width="0.0" height="0.0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="R4L-ny-bkS">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

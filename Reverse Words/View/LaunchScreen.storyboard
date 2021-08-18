@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -18,23 +18,23 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71s-Nz-vK4">
-                                <rect key="frame" x="42.666666666666657" y="161.00000000000003" width="289.66666666666674" height="289.66666666666674"/>
+                                <rect key="frame" x="36.5" y="66" width="247" height="190"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RGu-hp-6R2">
-                                        <rect key="frame" x="3" y="3" width="284" height="283"/>
+                                        <rect key="frame" x="2.5" y="3.5" width="242" height="183"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Reverse" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6l7-VQ-Xhi">
-                                                <rect key="frame" x="58.333333333333329" y="20" width="167.33333333333337" height="80.333333333333329"/>
+                                                <rect key="frame" x="50" y="20" width="142" height="52"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="100"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Words" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rh2-xN-hRI">
-                                                <rect key="frame" x="19.666666666666671" y="104.3333333333333" width="244.66666666666663" height="141.66666666666663"/>
+                                                <rect key="frame" x="-2" y="97" width="246" height="62"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="200"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -43,25 +43,22 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="6l7-VQ-Xhi" firstAttribute="top" secondItem="RGu-hp-6R2" secondAttribute="top" constant="20" id="06X-a9-35N"/>
-                                            <constraint firstAttribute="bottom" secondItem="Rh2-xN-hRI" secondAttribute="bottom" constant="37" id="0if-M8-R4m"/>
                                             <constraint firstItem="6l7-VQ-Xhi" firstAttribute="height" secondItem="RGu-hp-6R2" secondAttribute="height" multiplier="0.284153" id="65h-66-gus"/>
                                             <constraint firstItem="6l7-VQ-Xhi" firstAttribute="width" secondItem="RGu-hp-6R2" secondAttribute="width" multiplier="0.587992" id="9AN-4h-i0M"/>
-                                            <constraint firstItem="Rh2-xN-hRI" firstAttribute="centerX" secondItem="6l7-VQ-Xhi" secondAttribute="centerX" id="AlZ-HG-rvF"/>
-                                            <constraint firstItem="Rh2-xN-hRI" firstAttribute="centerX" secondItem="6l7-VQ-Xhi" secondAttribute="centerX" id="E0M-gx-lAN"/>
-                                            <constraint firstItem="Rh2-xN-hRI" firstAttribute="centerX" secondItem="6l7-VQ-Xhi" secondAttribute="centerX" id="FEw-QZ-3uT"/>
                                             <constraint firstItem="6l7-VQ-Xhi" firstAttribute="centerX" secondItem="RGu-hp-6R2" secondAttribute="centerX" id="I0E-G2-fQS"/>
-                                            <constraint firstItem="Rh2-xN-hRI" firstAttribute="top" secondItem="6l7-VQ-Xhi" secondAttribute="bottom" constant="4" id="Xrb-Vo-qPX"/>
-                                            <constraint firstItem="Rh2-xN-hRI" firstAttribute="width" secondItem="6l7-VQ-Xhi" secondAttribute="width" multiplier="1.46479" id="YsU-IW-lV5"/>
-                                            <constraint firstItem="Rh2-xN-hRI" firstAttribute="centerX" secondItem="RGu-hp-6R2" secondAttribute="centerX" id="oL8-yn-Znj"/>
+                                            <constraint firstItem="Rh2-xN-hRI" firstAttribute="top" secondItem="6l7-VQ-Xhi" secondAttribute="bottom" constant="24.670000000000002" id="QvW-Eo-O5J"/>
+                                            <constraint firstItem="Rh2-xN-hRI" firstAttribute="height" secondItem="RGu-hp-6R2" secondAttribute="height" multiplier="0.3404" id="bs5-dv-CDn"/>
+                                            <constraint firstItem="Rh2-xN-hRI" firstAttribute="width" secondItem="RGu-hp-6R2" secondAttribute="width" multiplier="1.00235" constant="3.4354460093895796" id="fvF-sR-w0g"/>
+                                            <constraint firstItem="Rh2-xN-hRI" firstAttribute="centerX" secondItem="RGu-hp-6R2" secondAttribute="centerX" id="jJo-0D-bZ1"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
-                                    <constraint firstItem="RGu-hp-6R2" firstAttribute="top" secondItem="71s-Nz-vK4" secondAttribute="top" constant="3" id="7cA-p8-Z9q"/>
-                                    <constraint firstItem="RGu-hp-6R2" firstAttribute="leading" secondItem="71s-Nz-vK4" secondAttribute="leading" constant="3" id="Jzu-Lw-LC4"/>
-                                    <constraint firstAttribute="bottom" secondItem="RGu-hp-6R2" secondAttribute="bottom" constant="3.6666666666667425" id="coD-Ph-LIs"/>
-                                    <constraint firstAttribute="trailing" secondItem="RGu-hp-6R2" secondAttribute="trailing" constant="2.6666666666667425" id="nG7-PP-smT"/>
+                                    <constraint firstItem="RGu-hp-6R2" firstAttribute="width" secondItem="71s-Nz-vK4" secondAttribute="width" multiplier="0.977733" id="F8F-i8-9zu"/>
+                                    <constraint firstItem="RGu-hp-6R2" firstAttribute="centerX" secondItem="71s-Nz-vK4" secondAttribute="centerX" id="Ggv-j5-YDn"/>
+                                    <constraint firstItem="RGu-hp-6R2" firstAttribute="height" secondItem="71s-Nz-vK4" secondAttribute="height" multiplier="0.963158" id="PIc-nJ-7vj"/>
+                                    <constraint firstItem="RGu-hp-6R2" firstAttribute="centerY" secondItem="71s-Nz-vK4" secondAttribute="centerY" id="arW-aI-eEY"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -69,15 +66,15 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="71s-Nz-vK4" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.394866" id="5dX-v8-bvg"/>
-                            <constraint firstItem="71s-Nz-vK4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="117" id="5nS-ER-zQ7"/>
                             <constraint firstItem="71s-Nz-vK4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BJp-4a-fE1"/>
+                            <constraint firstItem="71s-Nz-vK4" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-79" id="dTf-CA-Eut"/>
                             <constraint firstItem="71s-Nz-vK4" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.772947" id="lv5-fX-mPW"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50.625" y="373.75"/>
+            <point key="canvasLocation" x="50.399999999999999" y="373.15270935960592"/>
         </scene>
     </scenes>
     <resources>

@@ -12,14 +12,17 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var reverseButton: UIButton!
     @IBOutlet weak var lineUnderTextField: UIView!
+
     private let buttonOn: CGFloat = 1
     private let buttonOff: CGFloat = 0.6
     let reversingWords = ReversingWordsModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         textInputField.delegate = self
         configButtonAndResultLabel()
     }
+
     // MARK: - начаись экшены
     @IBAction func textFieldPressed() {
         textFieldDidBeginEditing(textInputField)
@@ -27,6 +30,7 @@ class ViewController: UIViewController {
     @IBAction func reverseButtonPressed() {
         changingTheButton()
     }
+
     // MARK: - метод изменения кнопки
     func changingTheButton() {
         switch reverseButton.titleLabel?.text {
@@ -34,6 +38,7 @@ class ViewController: UIViewController {
             resultLabel.text = reversingWords.reverseWords(text: textInputField.text!)
             if textInputField.text == "" {
                 reverseButton.setTitle("Reverse", for: .normal)
+                showAlert(title: "Attention", message: "Please enter the words")
             } else {
                 reverseButton.setTitle("Clear", for: .normal)
             }
@@ -47,11 +52,19 @@ class ViewController: UIViewController {
             break
         }
     }
+
     // MARK: - Конфигурации кнопки и лэйбла результатов
     func configButtonAndResultLabel() {
         reverseButton.alpha = buttonOff
         reverseButton.layer.cornerRadius = 14
         resultLabel.text = ""
+    }
+    // MARK: - Предупреждение
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }
 
@@ -62,6 +75,7 @@ extension ViewController: UITextFieldDelegate {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
+
     // MARK: - методы отслеживания ввода
     func textFieldDidBeginEditing(_ textField: UITextField) {
         lineUnderTextField.backgroundColor = .systemBlue
@@ -77,6 +91,7 @@ extension ViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         lineUnderTextField.backgroundColor = .systemGray5
     }
+
     // MARK: - Выполнение по кнопке return
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         resultLabel.text = reversingWords.reverseWords(text: textInputField.text!)
