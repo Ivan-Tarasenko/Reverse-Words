@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     private let buttonOn: CGFloat = 1
     private let buttonOff: CGFloat = 0.6
     let reversingWords = ReversingWordsModel()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         textInputField.delegate = self
