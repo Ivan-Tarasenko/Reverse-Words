@@ -9,7 +9,7 @@ import UIKit
 
 class ReversingWordsModel {
 
-    // MARK: - Метод производящий реверс
+    // MARK: - Perform reverse words
     func reverseWords (text: String) -> String {
         let words = getWords(from: text)
         var reversedWordsArray = [String]()

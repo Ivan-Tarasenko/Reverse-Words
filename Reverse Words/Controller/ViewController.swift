@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         configButtonAndResultLabel()
     }
 
-    // MARK: - начаись экшены
+    // MARK: - Actions
     @IBAction func textFieldPressed() {
         textFieldDidBeginEditing(textInputField)
     }
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         changingTheButton()
     }
 
-    // MARK: - метод изменения кнопки
+    // MARK: - Change button status
     func changingTheButton() {
         switch reverseButton.titleLabel?.text {
         case "Reverse":
@@ -53,13 +53,13 @@ class ViewController: UIViewController {
         }
     }
 
-    // MARK: - Конфигурации кнопки и лэйбла результатов
+    // MARK: - Config button and label
     func configButtonAndResultLabel() {
         reverseButton.alpha = buttonOff
         reverseButton.layer.cornerRadius = 14
         resultLabel.text = ""
     }
-    // MARK: - Предупреждение
+    // MARK: - Alert
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default)
@@ -68,15 +68,16 @@ class ViewController: UIViewController {
     }
 }
 
-// MARK: - Расширение для Text Field
+// MARK: - Extention for Text Field
 extension ViewController: UITextFieldDelegate {
-    // MARK: - Скрытие клавиатуры по тапу за пределами клавиатуры
+
+    // MARK: - Hide keyboard by clicking outside
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
 
-    // MARK: - методы отслеживания ввода
+    // MARK: - Input tracking
     func textFieldDidBeginEditing(_ textField: UITextField) {
         lineUnderTextField.backgroundColor = .systemBlue
         if textInputField.text == "" {
@@ -92,7 +93,7 @@ extension ViewController: UITextFieldDelegate {
         lineUnderTextField.backgroundColor = .systemGray5
     }
 
-    // MARK: - Выполнение по кнопке return
+    // MARK: - Excute on the button "Return"
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         resultLabel.text = reversingWords.reverseWords(text: textInputField.text!)
         if resultLabel.text != "" {
