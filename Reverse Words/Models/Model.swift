@@ -24,9 +24,3 @@ class ReversingWordsModel {
         return text.split(separator: " ")
     }
 }
-
-extension StringProtocol {
-    var words: [SubSequence] {
-        return split { !$0.isLetter }
-    }
-}
