@@ -35,22 +35,32 @@ class ViewController: UIViewController {
     func changingTheButton() {
         switch reverseButton.titleLabel?.text {
         case "Reverse":
-            resultLabel.text = reversingWords.reverseWords(text: textInputField.text!)
-            if textInputField.text == "" {
-                reverseButton.setTitle("Reverse", for: .normal)
-                showAlert(title: "Attention", message: "Please enter the words")
-            } else {
-                reverseButton.setTitle("Clear", for: .normal)
-            }
+         setIfbuttonTitleReverse()
         case "Clear":
-            lineUnderTextField.backgroundColor = .systemGray5
-            textInputField.text = ""
-            reverseButton.setTitle("Reverse", for: .normal)
-            reverseButton.alpha = buttonOff
-            resultLabel.text = ""
+           setIfbuttonTitleCrear()
         default:
             break
         }
+    }
+
+    // MARK: - Set the condition for button "Reverse"
+    func setIfbuttonTitleReverse() {
+        resultLabel.text = reversingWords.reverseWords(text: textInputField.text!)
+        if textInputField.text == "" {
+            reverseButton.setTitle("Reverse", for: .normal)
+            showAlert(title: "Attention", message: "Please enter the words")
+        } else {
+            reverseButton.setTitle("Clear", for: .normal)
+        }
+    }
+
+    // MARK: - Set the condition for button "Clear"
+    func setIfbuttonTitleCrear() {
+        lineUnderTextField.backgroundColor = .systemGray5
+        textInputField.text = ""
+        reverseButton.setTitle("Reverse", for: .normal)
+        reverseButton.alpha = buttonOff
+        resultLabel.text = ""
     }
 
     // MARK: - Config button and label

@@ -4,7 +4,27 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Button Return UITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+		<key>Button Reverse UITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Reverse Words Model UnitiTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Reverse Words.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Reverse WordsTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -13,6 +33,16 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>1A483D2A26CB3E6600B3B2A6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1A7593DA26D2889500851B23</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1A7593E826D28B5900851B23</key>
 		<dict>
 			<key>primary</key>
 			<true/>

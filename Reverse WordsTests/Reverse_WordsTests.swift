@@ -2,14 +2,14 @@
 //  Reverse_WordsTests.swift
 //  Reverse WordsTests
 //
-//  Created by Иван Тарасенко on 19.08.2021.
+//  Created by Иван Тарасенко on 22.08.2021.
 //
 
 import XCTest
+
 @testable import Reverse_Words
 
-class ReverseWordsUnitTests: XCTestCase {
-
+class ReverseWordsTests: XCTestCase {
     var sut: ReversingWordsModel!
 
     override func setUpWithError() throws {
@@ -23,7 +23,13 @@ class ReverseWordsUnitTests: XCTestCase {
     }
 
     func testReverse() {
+        // gevin
+        let stringInput = "Test string"
+        let stringOut = "tseT gnirts"
+        // when
+        let reverse = sut.reverseWords(text: stringInput)
+        // then
+        XCTAssertEqual(reverse, stringOut)
 
-        XCTAssertEqual(sut.reverseWords(text: "Test string"), "tseT gnirts")
     }
 }
