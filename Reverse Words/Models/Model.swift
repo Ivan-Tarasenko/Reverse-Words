@@ -20,6 +20,7 @@ class ReversingWordsModel {
         let result = reversedWordsArray.joined(separator: " ")
         return result
     }
+
     private func getWords(from text: String) -> [Substring] {
         return text.split(separator: " ")
     }
