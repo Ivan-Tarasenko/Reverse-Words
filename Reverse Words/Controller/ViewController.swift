@@ -12,15 +12,19 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var reverseButton: UIButton!
     @IBOutlet weak var lineUnderTextField: UIView!
+    @IBOutlet weak var inputFieldAnagrams: UITextField!
+    @IBOutlet weak var alertsLabel: UILabel!
 
     private let buttonOn: CGFloat = 1
     private let buttonOff: CGFloat = 0.6
     let reversingWords = ReversingWordsModel()
+    let anagram = Anagrams()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         textInputField.delegate = self
         configButtonAndResultLabel()
+        inputFieldAnagrams.isHidden.toggle() //todo: перенести в метод установок
     }
 
     // MARK: - Actions
@@ -29,6 +33,8 @@ class ViewController: UIViewController {
     }
     @IBAction func reverseButtonPressed() {
         changingTheButton()
+    }
+    @IBAction func modeSwich(_ sender: UISegmentedControl) {
     }
 
     // MARK: - Change button status

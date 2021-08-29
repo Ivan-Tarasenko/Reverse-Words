@@ -18,6 +18,7 @@
 		1A483D5026CB418800B3B2A6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A483D4F26CB418800B3B2A6 /* Model.swift */; };
 		1A7593DE26D2889500851B23 /* Reverse_WordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7593DD26D2889500851B23 /* Reverse_WordsTests.swift */; };
 		1A7593EC26D28B5900851B23 /* Reverse_WordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7593EB26D28B5900851B23 /* Reverse_WordsUITests.swift */; };
+		1AA0412E26DBBD7600A3EECD /* Anagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA0412D26DBBD7600A3EECD /* Anagram.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		1A7593E926D28B5900851B23 /* Reverse WordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reverse WordsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7593EB26D28B5900851B23 /* Reverse_WordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reverse_WordsUITests.swift; sourceTree = "<group>"; };
 		1A7593ED26D28B5900851B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AA0412D26DBBD7600A3EECD /* Anagram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anagram.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				1A483D4F26CB418800B3B2A6 /* Model.swift */,
+				1AA0412D26DBBD7600A3EECD /* Anagram.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AA0412E26DBBD7600A3EECD /* Anagram.swift in Sources */,
 				1A483D3326CB3E6600B3B2A6 /* ViewController.swift in Sources */,
 				1A483D2F26CB3E6600B3B2A6 /* AppDelegate.swift in Sources */,
 				1A483D3126CB3E6600B3B2A6 /* SceneDelegate.swift in Sources */,

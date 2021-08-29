@@ -16,6 +16,7 @@ class ReversingWordsModel {
         for word in words {
             let reverse = String(word.reversed())
             reversedWordsArray.append(reverse)
+
         }
         let result = reversedWordsArray.joined(separator: " ")
         return result

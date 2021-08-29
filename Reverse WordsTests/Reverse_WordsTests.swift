@@ -22,7 +22,19 @@ class ReverseWordsTests: XCTestCase {
         try super.tearDownWithError()
     }
 
-    func testReverse() {
+    func testInputEmptyString() {
+        let stringInput = ""
+        let stringOut = ""
+        XCTAssertEqual(stringOut, sut.reverseWords(text: stringInput))
+    }
+
+    func testInputSinglWord() {
+        let stringInput = "Test"
+        let stringOut = "tseT"
+        XCTAssertEqual(stringOut, sut.reverseWords(text: stringInput))
+    }
+
+    func testMultipleWords() {
         // gevin
         let stringInput = "Test string"
         let stringOut = "tseT gnirts"
@@ -30,6 +42,5 @@ class ReverseWordsTests: XCTestCase {
         let reverse = sut.reverseWords(text: stringInput)
         // then
         XCTAssertEqual(reverse, stringOut)
-
     }
 }
