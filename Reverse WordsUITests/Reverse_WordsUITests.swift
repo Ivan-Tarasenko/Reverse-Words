@@ -8,37 +8,74 @@
 import XCTest
 
 class ReverseWordsUITests: XCTestCase {
+    var app: XCUIApplication!
+    let strngTest = "Foxminded cool 24/7"
+    let ignorChar = "Foxminded"
 
     override func setUpWithError() throws {
-        continueAfterFailure = false
-
+        app = XCUIApplication()
+        app.launch()
     }
 
     override func tearDownWithError() throws {
-
+        app = nil
     }
 
     func testCheckingTheButtonOperationReturn() throws {
 
-        let app = XCUIApplication()
-        app.launch()
-        app.textFields["InputWords"].tap()
-        app.textFields["InputWords"].typeText("Test string")
+        inpunStringInTextField(string: strngTest)
         app.buttons["Return"].tap()
 
-        XCTAssert(app.staticTexts["tseT gnirts"].exists)
+        XCTAssert(app.staticTexts["dednimxoF looc 7/42"].exists)
     }
 
     func testCheckingTheButtonOperationReverse() throws {
 
-        let app = XCUIApplication()
-        app.launch()
-        app.textFields["InputWords"].tap()
-        app.textFields["InputWords"].typeText("Test string")
+        inpunStringInTextField(string: strngTest)
         app.otherElements["BigView"].tap()
         app.buttons["ReverseButton"].tap()
 
-        XCTAssert(app.staticTexts["tseT gnirts"].exists)
+        XCTAssert(app.staticTexts["dednimxoF looc 7/42"].exists)
+    }
+
+    func testCheckigTheButtonResultDefaultValue() throws {
+
+        inpunStringInTextField(string: strngTest)
+        pressedResultButton()
+
+        XCTAssert(app.staticTexts["dednimxoF looc 24/7"].exists)
+
+    }
+
+    func testCheckigTheButtonResultForInputCustomCharacter() throws {
+
+        app.segmentedControls.buttons["Custom"].tap()
+        inpunStringInTextField(string: strngTest)
+        pressedResultButton()
+        pressedIgnorTextField(string: ignorChar)
+        pressedResultButton()
+
+        XCTAssert(app.staticTexts["Foxminded looc 7/42"].exists)
+    }
+
+    func testRealTimeInputText() {
+
+        app.segmentedControls.buttons["Hardcore"].tap()
+        inpunStringInTextField(string: strngTest)
+
+        XCTAssert(app.staticTexts["dednimxoF looc 24/7"].exists)
+
+    }
+
+    func testRealTimeInputTextAndInputIgnorCharacter() {
+
+        app.segmentedControls.buttons["Hardcore"].tap()
+        inpunStringInTextField(string: strngTest)
+        app.otherElements["BigView"].tap()
+        pressedIgnorTextField(string: ignorChar)
+        app.otherElements["BigView"].tap()
+
+        XCTAssert(app.staticTexts["Foxminded looc 7/42"].exists)
     }
 
     func testLaunchPerformance() throws {
@@ -47,5 +84,20 @@ class ReverseWordsUITests: XCTestCase {
                 XCUIApplication().launch()
             }
         }
+    }
+
+    private func inpunStringInTextField(string: String) {
+        app.textFields["InputWords"].tap()
+        app.textFields["InputWords"].typeText(string)
+    }
+
+    private func pressedIgnorTextField(string: String) {
+        app.textFields["FieldIgnorChar"].tap()
+        app.textFields["FieldIgnorChar"].typeText("Foxminded")
+    }
+
+    private func pressedResultButton() {
+        app.otherElements["BigView"].tap()
+        app.buttons["ResultButton"].tap()
     }
 }

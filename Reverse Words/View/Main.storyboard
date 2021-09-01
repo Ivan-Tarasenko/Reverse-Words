@@ -36,14 +36,14 @@
                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="textFieldPressed" destination="BYZ-38-t0r" eventType="editingChanged" id="lwa-Mm-CxE"/>
+                                            <action selector="textFieldPressed:" destination="BYZ-38-t0r" eventType="editingChanged" id="vqi-aj-aLA"/>
                                         </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1V-bh-tR0">
-                                        <rect key="frame" x="13" y="351.33333333333331" width="343" height="1"/>
+                                        <rect key="frame" x="16" y="351.33333333333331" width="343" height="1"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="Y8n-eF-yUY"/>
+                                            <constraint firstAttribute="height" constant="1" id="0RA-NJ-PDK"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wj1-pw-Tmh">
@@ -77,33 +77,50 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JgU-RP-cvU">
-                                        <rect key="frame" x="16" y="477.66666666666669" width="343" height="32"/>
+                                        <rect key="frame" x="16" y="447" width="343" height="32"/>
                                         <segments>
                                             <segment title="Default"/>
                                             <segment title="Custom"/>
                                             <segment title="Hardcore"/>
                                         </segments>
                                         <connections>
-                                            <action selector="modeSwich:" destination="BYZ-38-t0r" eventType="valueChanged" id="mT3-GI-ZnN"/>
+                                            <action selector="modeSwich" destination="BYZ-38-t0r" eventType="valueChanged" id="2qp-xQ-Yrv"/>
                                         </connections>
                                     </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All characters except alphabetic simbols" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KV-RZ-G7C">
-                                        <rect key="frame" x="16" y="562" width="343" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All characters except alphabetic simbols" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KV-RZ-G7C">
+                                        <rect key="frame" x="16" y="516" width="343" height="19"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GH9-AZ-2Zu">
-                                        <rect key="frame" x="16" y="554.66666666666663" width="343" height="34"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pp6-6N-sVH">
+                                        <rect key="frame" x="16" y="615" width="343" height="56"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="ResultButton"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="17"/>
+                                        <state key="normal" title="Result">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="resultButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="GZ5-tB-gcr"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to ignor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GH9-AZ-2Zu">
+                                        <rect key="frame" x="16" y="508" width="343" height="34"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="FieldIgnorChar"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="textFieldIgnor" destination="BYZ-38-t0r" eventType="editingChanged" id="hng-iO-iBR"/>
+                                        </connections>
                                     </textField>
                                 </subviews>
                                 <accessibility key="accessibilityConfiguration" identifier="BigView"/>
                                 <constraints>
                                     <constraint firstItem="1KV-RZ-G7C" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.112" constant="301" id="1M4-DO-Qa5"/>
                                     <constraint firstItem="qJq-aX-FgI" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.570048" id="3Rk-hx-WC4"/>
-                                    <constraint firstItem="JgU-RP-cvU" firstAttribute="top" secondItem="ejm-df-BMR" secondAttribute="bottom" constant="68" id="AiB-We-AzF"/>
+                                    <constraint firstItem="ejm-df-BMR" firstAttribute="top" secondItem="B1V-bh-tR0" secondAttribute="bottom" constant="24.329999999999998" id="3sL-mY-oa0"/>
+                                    <constraint firstItem="JgU-RP-cvU" firstAttribute="top" secondItem="ejm-df-BMR" secondAttribute="bottom" constant="37.333333333333314" id="AiB-We-AzF"/>
                                     <constraint firstItem="qJq-aX-FgI" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="BcK-8h-mhq"/>
                                     <constraint firstItem="Wj1-pw-Tmh" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0689655" id="BmN-Z0-mFL"/>
                                     <constraint firstItem="9UR-De-VhA" firstAttribute="top" secondItem="Tut-3I-kp2" secondAttribute="bottom" constant="58.999999999999972" id="CJM-V1-HE0">
@@ -119,23 +136,27 @@
                                     <constraint firstItem="1KV-RZ-G7C" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="IS4-J8-UXS"/>
                                     <constraint firstItem="9UR-De-VhA" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0270936" constant="6.8916240000000002" id="Ibk-Ca-mF8"/>
                                     <constraint firstItem="JgU-RP-cvU" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0381773" id="JOO-dy-LXL"/>
+                                    <constraint firstItem="Wj1-pw-Tmh" firstAttribute="top" secondItem="Pp6-6N-sVH" secondAttribute="bottom" constant="19" id="K3O-r7-hk6"/>
                                     <constraint firstItem="JgU-RP-cvU" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.914667" id="ME8-AL-Ml1"/>
-                                    <constraint firstItem="B1V-bh-tR0" firstAttribute="top" secondItem="9UR-De-VhA" secondAttribute="bottom" constant="11" id="O0C-Ud-miO"/>
+                                    <constraint firstItem="Pp6-6N-sVH" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0689655" id="Pmf-3B-oUa"/>
+                                    <constraint firstItem="Pp6-6N-sVH" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="Ql3-x3-4W2"/>
+                                    <constraint firstItem="B1V-bh-tR0" firstAttribute="top" secondItem="9UR-De-VhA" secondAttribute="bottom" constant="11" id="Rgv-dL-hPc"/>
                                     <constraint firstItem="Wj1-pw-Tmh" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.914667" id="Rwh-eK-QL1"/>
-                                    <constraint firstItem="GH9-AZ-2Zu" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.0853333" constant="311" id="Spt-5h-kxA"/>
-                                    <constraint firstAttribute="trailing" secondItem="B1V-bh-tR0" secondAttribute="trailing" constant="19" id="X3C-xe-pny"/>
-                                    <constraint firstItem="B1V-bh-tR0" firstAttribute="leading" secondItem="MLU-Rl-lPq" secondAttribute="leading" constant="13" id="XXA-QO-L3I"/>
+                                    <constraint firstItem="GH9-AZ-2Zu" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.0853333" constant="311.00001250000003" id="Spt-5h-kxA"/>
+                                    <constraint firstItem="Pp6-6N-sVH" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.914667" id="Wdd-03-f6L"/>
+                                    <constraint firstItem="B1V-bh-tR0" firstAttribute="width" secondItem="9UR-De-VhA" secondAttribute="width" id="XQc-Xm-nAm"/>
                                     <constraint firstItem="ejm-df-BMR" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0270936" constant="10.891624" id="YSL-KH-u9K"/>
                                     <constraint firstItem="JgU-RP-cvU" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="ZIT-3D-d5o"/>
                                     <constraint firstItem="GH9-AZ-2Zu" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="ZJG-Yh-CNV"/>
                                     <constraint firstItem="9UR-De-VhA" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.914667" id="awW-Ay-ilT"/>
+                                    <constraint firstItem="Wj1-pw-Tmh" firstAttribute="width" secondItem="Pp6-6N-sVH" secondAttribute="width" id="j8D-3c-rjI"/>
                                     <constraint firstItem="qJq-aX-FgI" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0503686" id="jxo-Jy-Imt"/>
                                     <constraint firstItem="Tut-3I-kp2" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.966222" id="miW-Ak-ero"/>
-                                    <constraint firstItem="1KV-RZ-G7C" firstAttribute="top" secondItem="JgU-RP-cvU" secondAttribute="bottom" constant="53.329999999999998" id="n31-v5-pes"/>
+                                    <constraint firstItem="1KV-RZ-G7C" firstAttribute="top" secondItem="JgU-RP-cvU" secondAttribute="bottom" constant="38" id="n31-v5-pes"/>
+                                    <constraint firstItem="B1V-bh-tR0" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="npc-lR-7AP"/>
                                     <constraint firstItem="ejm-df-BMR" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.914667" id="oJ1-gO-4dn"/>
-                                    <constraint firstItem="1KV-RZ-G7C" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0258621" id="pwz-4x-Pgr"/>
-                                    <constraint firstItem="ejm-df-BMR" firstAttribute="top" secondItem="B1V-bh-tR0" secondAttribute="bottom" constant="24.333333333333371" id="rFZ-qE-fLo"/>
-                                    <constraint firstItem="GH9-AZ-2Zu" firstAttribute="top" secondItem="JgU-RP-cvU" secondAttribute="bottom" constant="46" id="rkF-VO-J3V"/>
+                                    <constraint firstItem="1KV-RZ-G7C" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0258621" constant="-2.0000251999999996" id="pwz-4x-Pgr"/>
+                                    <constraint firstItem="GH9-AZ-2Zu" firstAttribute="top" secondItem="JgU-RP-cvU" secondAttribute="bottom" constant="30" id="rkF-VO-J3V"/>
                                     <constraint firstAttribute="bottom" secondItem="Wj1-pw-Tmh" secondAttribute="bottom" constant="66" id="rsy-ha-wKj"/>
                                     <constraint firstItem="Tut-3I-kp2" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0537767" id="wLe-4A-2F1"/>
                                     <constraint firstItem="Tut-3I-kp2" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" constant="-0.33333333333334281" id="wqv-c3-XyL"/>
@@ -155,16 +176,18 @@
                     <navigationItem key="navigationItem" title="Reverse Words" id="Qm8-Lc-7aY"/>
                     <connections>
                         <outlet property="alertsLabel" destination="1KV-RZ-G7C" id="wWs-Ur-s7E"/>
-                        <outlet property="inputFieldAnagrams" destination="GH9-AZ-2Zu" id="Xot-HY-Ala"/>
+                        <outlet property="inputFieldAnagrams" destination="GH9-AZ-2Zu" id="hp4-Wc-FGo"/>
                         <outlet property="lineUnderTextField" destination="B1V-bh-tR0" id="ggR-Ir-e90"/>
+                        <outlet property="resultButton" destination="Pp6-6N-sVH" id="og1-NF-ucZ"/>
                         <outlet property="resultLabel" destination="ejm-df-BMR" id="kLU-KQ-WWT"/>
                         <outlet property="reverseButton" destination="Wj1-pw-Tmh" id="yOv-qa-Dzr"/>
+                        <outlet property="segmented" destination="JgU-RP-cvU" id="E4L-0i-bmW"/>
                         <outlet property="textInputField" destination="9UR-De-VhA" id="0bn-jg-wGU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="935.20000000000005" y="68.7192118226601"/>
+            <point key="canvasLocation" x="933.60000000000002" y="67.980295566502463"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZFF-JN-2QI">
