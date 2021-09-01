@@ -10,8 +10,7 @@ import XCTest
 class AnagramsUnitTest: XCTestCase {
 
     var sut: Anagrams!
-//    let string = "Foxminded 24/7"
-//    let defaultResult = "dednimxoF looc 24/7"
+    let characterXL = "xl"
 
     override func setUpWithError() throws {
         try super.setUpWithError()
@@ -72,10 +71,12 @@ class AnagramsUnitTest: XCTestCase {
     }
 
     func testInputManyWordsInDefaultExcludingOption1() {
-        let string = "Foxminded cool 24/7"
-        let defaultResult = "dednimxoF looc 24/7"
+        let stringManyWords = "Foxminded cool 24/7"
+        let resultManyWords = "dednimxoF looc 24/7"
 
-        XCTAssertEqual(sut.defaultExcuding(string: string), defaultResult)
+        let anagram = sut.defaultExcuding(string: stringManyWords)
+
+        XCTAssertEqual(anagram, resultManyWords)
     }
 
     func testInputManyWordsInDefaultExcludingOption2() {
@@ -98,8 +99,11 @@ class AnagramsUnitTest: XCTestCase {
 
     func testIfValuesAreNotEqualInDefaultExcluding() {
         let string = "Foxminded cool 24/7"
-        let defaultResult = "dednimxoF looc 24/7"
-        XCTAssertNotEqual(sut.defaultExcuding(string: string), defaultResult)
+        let defaultResult = "Fdednimxo looc 24/7"
+
+        let anagram = sut.defaultExcuding(string: string)
+
+        XCTAssertNotEqual(anagram, defaultResult)
     }
 
     func testEmptyStrngInCustomCharacter() {
@@ -124,40 +128,36 @@ class AnagramsUnitTest: XCTestCase {
 
     func testInputManyWordsInCustomCharacterOption1() {
         let string = "Foxminded cool 24/7"
-        let character = "xl"
         let result = "dexdnimoF oocl 7/42"
 
-        let anagram = sut.customCharacter(string: string, ignorCharacter: character)
+        let anagram = sut.customCharacter(string: string, ignorCharacter: characterXL)
 
         XCTAssertEqual(anagram, result)
     }
 
     func testInputManyWordsInCustomCharacterOption2() {
         let string = "abcd efgh"
-        let character = "xl"
         let result = "dcba hgfe"
 
-        let anagram = sut.customCharacter(string: string, ignorCharacter: character)
+        let anagram = sut.customCharacter(string: string, ignorCharacter: characterXL)
 
         XCTAssertEqual(anagram, result)
     }
 
     func testInputManyWordsInCustomCharacterOption3() {
         let string = "a1bcd efglh"
-        let character = "xl"
         let result = "dcb1a hgfle"
 
-        let anagram = sut.customCharacter(string: string, ignorCharacter: character)
+        let anagram = sut.customCharacter(string: string, ignorCharacter: characterXL)
 
         XCTAssertEqual(anagram, result)
     }
 
     func testIfValuesAreNotEqualInCustomCharacter() {
         let string = "a1bcd efglh"
-        let character = "xl"
         let result = "dcb1a hfgle"
 
-        let anagram = sut.customCharacter(string: string, ignorCharacter: character)
+        let anagram = sut.customCharacter(string: string, ignorCharacter: characterXL)
 
         XCTAssertNotEqual(anagram, result)
     }
