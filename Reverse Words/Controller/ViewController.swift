@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var reverseButton: UIButton!
     @IBOutlet weak var lineUnderTextField: UIView!
     @IBOutlet weak var segmented: UISegmentedControl!
-    @IBOutlet weak var inputFieldAnagrams: UITextField!
+    @IBOutlet weak var fieldWithIgnoredCharacters: UITextField!
     @IBOutlet weak var alertsLabel: UILabel!
     @IBOutlet weak var resultButton: UIButton!
 
@@ -29,30 +29,30 @@ class ViewController: UIViewController {
     }
 
     // MARK: - Actions
-    @IBAction func textFieldPressed(_ sender: Any) {
+    @IBAction func fieldForWordInput() {
         textFieldDidBeginEditing(textInputField)
-        realTimeInput()
+        showTextDuringInput()
     }
 
-    @IBAction func reverseButtonPressed() {
+    @IBAction func pressingReverseButton() {
         changingTheButton()
     }
 
-    @IBAction func modeSwich() {
-        setapSegmented()
+    @IBAction func segmentedControl() {
+        switchSegmentedControl()
     }
 
-    @IBAction func resultButtonPressed() {
+    @IBAction func pressingResultButton() {
         setButtonResult()
     }
 
-    @IBAction func textFieldIgnor() {
-        textFieldDidBeginEditing(inputFieldAnagrams)
+    @IBAction func fieldForEnterIgnoredCharacters() {
+        textFieldDidBeginEditing(fieldWithIgnoredCharacters)
         func textFieldDidBeginEditing(_ textField: UITextField) {
             if segmented.selectedSegmentIndex == 2 {
-                resultLabel.text = inputFieldAnagrams.text
+                resultLabel.text = fieldWithIgnoredCharacters.text
                 resultLabel.text = anagram.customCharacter(string: textInputField.text!,
-                                                           ignorCharacter: inputFieldAnagrams.text!)
+                                                           ignorCharacter: fieldWithIgnoredCharacters.text!)
             }
         }
     }
@@ -61,16 +61,16 @@ class ViewController: UIViewController {
     func changingTheButton() {
         switch reverseButton.titleLabel?.text {
         case "Reverse":
-            setIfbuttonTitleReverse()
+            setIfButtonTitleReverse()
         case "Clear":
-            setIfbuttonTitleCrear()
+            setIfButtonTitleClear()
         default:
             break
         }
     }
 
     // MARK: - Set the condition for button "Reverse"
-    func setIfbuttonTitleReverse() {
+    func setIfButtonTitleReverse() {
         resultLabel.text = reversingWords.reverseWords(text: textInputField.text!)
         if textInputField.text == "" {
             reverseButton.setTitle("Reverse", for: .normal)
@@ -81,7 +81,7 @@ class ViewController: UIViewController {
     }
 
     // MARK: - Set the condition for button "Clear"
-    func setIfbuttonTitleCrear() {
+    func setIfButtonTitleClear() {
         lineUnderTextField.backgroundColor = .systemGray5
         textInputField.text = ""
         reverseButton.setTitle("Reverse", for: .normal)
@@ -90,25 +90,25 @@ class ViewController: UIViewController {
     }
 
     // MARK: - Set the condition for Segmented control
-    func setapSegmented() {
+    func switchSegmentedControl() {
         switch segmented.selectedSegmentIndex {
         case 0:
             resultLabel.text = ""
-            inputFieldAnagrams.isHidden = true
+            fieldWithIgnoredCharacters.isHidden = true
             alertsLabel.isHidden = false
             resultButton.isHidden = false
         case 1:
             resultLabel.text = ""
             alertsLabel.isHidden = true
-            inputFieldAnagrams.isHidden = false
+            fieldWithIgnoredCharacters.isHidden = false
             resultButton.isHidden = false
         case 2:
 
             resultLabel.text = ""
             textInputField.text = ""
-            inputFieldAnagrams.text = ""
+            fieldWithIgnoredCharacters.text = ""
             alertsLabel.isHidden = true
-            inputFieldAnagrams.isHidden = false
+            fieldWithIgnoredCharacters.isHidden = false
             resultButton.isHidden = true
         default:
             break
@@ -122,10 +122,10 @@ class ViewController: UIViewController {
         }
         switch segmented.selectedSegmentIndex {
         case 0:
-            resultLabel.text = anagram.defaultExcuding(string: textInputField.text!)
+            resultLabel.text = anagram.defaultException(string: textInputField.text!)
         case 1:
             resultLabel.text = anagram.customCharacter(string: textInputField.text!,
-                                                       ignorCharacter: inputFieldAnagrams.text!)
+                                                       ignorCharacter: fieldWithIgnoredCharacters.text!)
         default:
             break
         }
@@ -138,14 +138,14 @@ class ViewController: UIViewController {
         resultLabel.text = ""
         resultButton.alpha = buttonOff
         resultButton.layer.cornerRadius = 14
-        inputFieldAnagrams.isHidden = true
+        fieldWithIgnoredCharacters.isHidden = true
     }
 
-    // MARK: - Real-time input
-    func realTimeInput() {
+    // MARK: - Shows the text simultaneously with its input
+    func showTextDuringInput() {
         if segmented.selectedSegmentIndex == 2 {
             resultLabel.text = textInputField.text
-            resultLabel.text = anagram.defaultExcuding(string: textInputField.text!)
+            resultLabel.text = anagram.defaultException(string: textInputField.text!)
         }
     }
 
@@ -159,7 +159,7 @@ class ViewController: UIViewController {
 
 }
 
-// MARK: - Extention for Text Field
+// MARK: - Extension for Text Field
 extension ViewController: UITextFieldDelegate {
 
     // MARK: - Hide keyboard by clicking outside
@@ -186,7 +186,7 @@ extension ViewController: UITextFieldDelegate {
         lineUnderTextField.backgroundColor = .systemGray5
     }
 
-    // MARK: - Excute on the button "Return"
+    // MARK: - Perform reverse by button "Return"
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         resultLabel.text = reversingWords.reverseWords(text: textInputField.text!)
         if resultLabel.text != "" {

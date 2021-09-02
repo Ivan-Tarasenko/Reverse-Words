@@ -9,8 +9,8 @@ import XCTest
 
 class ReverseWordsUITests: XCTestCase {
     var app: XCUIApplication!
-    let strngTest = "Foxminded cool 24/7"
-    let ignorChar = "Foxminded"
+    let stringTest = "Foxminded cool 24/7"
+    let ignoredChar = "Foxminded"
 
     override func setUpWithError() throws {
         app = XCUIApplication()
@@ -23,7 +23,7 @@ class ReverseWordsUITests: XCTestCase {
 
     func testCheckingTheButtonOperationReturn() throws {
 
-        inpunStringInTextField(string: strngTest)
+        inputStringInTextField(string: stringTest)
         app.buttons["Return"].tap()
 
         XCTAssert(app.staticTexts["dednimxoF looc 7/42"].exists)
@@ -31,7 +31,7 @@ class ReverseWordsUITests: XCTestCase {
 
     func testCheckingTheButtonOperationReverse() throws {
 
-        inpunStringInTextField(string: strngTest)
+        inputStringInTextField(string: stringTest)
         app.otherElements["BigView"].tap()
         app.buttons["ReverseButton"].tap()
 
@@ -40,7 +40,7 @@ class ReverseWordsUITests: XCTestCase {
 
     func testCheckigTheButtonResultDefaultValue() throws {
 
-        inpunStringInTextField(string: strngTest)
+        inputStringInTextField(string: stringTest)
         pressedResultButton()
 
         XCTAssert(app.staticTexts["dednimxoF looc 24/7"].exists)
@@ -50,9 +50,9 @@ class ReverseWordsUITests: XCTestCase {
     func testCheckigTheButtonResultForInputCustomCharacter() throws {
 
         app.segmentedControls.buttons["Custom"].tap()
-        inpunStringInTextField(string: strngTest)
+        inputStringInTextField(string: stringTest)
         pressedResultButton()
-        pressedIgnorTextField(string: ignorChar)
+        pressedIgnorTextField(string: ignoredChar)
         pressedResultButton()
 
         XCTAssert(app.staticTexts["Foxminded looc 7/42"].exists)
@@ -61,7 +61,7 @@ class ReverseWordsUITests: XCTestCase {
     func testRealTimeInputText() {
 
         app.segmentedControls.buttons["Hardcore"].tap()
-        inpunStringInTextField(string: strngTest)
+        inputStringInTextField(string: stringTest)
 
         XCTAssert(app.staticTexts["dednimxoF looc 24/7"].exists)
 
@@ -70,9 +70,9 @@ class ReverseWordsUITests: XCTestCase {
     func testRealTimeInputTextAndInputIgnorCharacter() {
 
         app.segmentedControls.buttons["Hardcore"].tap()
-        inpunStringInTextField(string: strngTest)
+        inputStringInTextField(string: stringTest)
         app.otherElements["BigView"].tap()
-        pressedIgnorTextField(string: ignorChar)
+        pressedIgnorTextField(string: ignoredChar)
         app.otherElements["BigView"].tap()
 
         XCTAssert(app.staticTexts["Foxminded looc 7/42"].exists)
@@ -86,7 +86,7 @@ class ReverseWordsUITests: XCTestCase {
         }
     }
 
-    private func inpunStringInTextField(string: String) {
+    private func inputStringInTextField(string: String) {
         app.textFields["InputWords"].tap()
         app.textFields["InputWords"].typeText(string)
     }

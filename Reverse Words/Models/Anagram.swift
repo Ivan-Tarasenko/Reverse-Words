@@ -9,7 +9,7 @@ import Foundation
 
 class Anagrams {
 
-    func excludingСharacters(_ input: String, excluded: [Character]) -> String {
+    func ignoredCharacters(_ input: String, excluded: [Character]) -> String {
 
         var result = Array(input)
         var charOne = 0
@@ -35,14 +35,14 @@ class Anagrams {
         return String(result)
     }
 
-    // MARK: - Ignor default
-    func defaultExcuding(string: String) -> String {
+    // MARK: - Ignoring default character
+    func defaultException(string: String) -> String {
         var result = ""
         var arrayString: [String] = []
         let string = string.split(separator: " ")
         let defaultCharacter = setDefaultCharacters()
         for word in string {
-            let excludingChar = excludingСharacters(String(word),
+            let excludingChar = ignoredCharacters(String(word),
                                                      excluded: defaultCharacter)
             arrayString.append(excludingChar)
             result = arrayString.joined(separator: " ")
@@ -52,15 +52,15 @@ class Anagrams {
 
     // MARK: - Entering custom characters
     func customCharacter(string: String, ignorCharacter: String) -> String {
-        let inputarrayString = Array(ignorCharacter)
 
+        let inputArrayString = Array(ignorCharacter)
         var result = ""
         var arrayString: [String] = []
         let string = string.split(separator: " ")
         var defaultCharacter: [Character] = []
-        defaultCharacter += inputarrayString
+        defaultCharacter += inputArrayString
         for word in string {
-            let excludingChar = excludingСharacters(String(word),
+            let excludingChar = ignoredCharacters(String(word),
                                                              excluded: defaultCharacter)
             arrayString.append(excludingChar)
             result = arrayString.joined(separator: " ")

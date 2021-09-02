@@ -26,46 +26,46 @@ class AnagramsUnitTest: XCTestCase {
         let string = ""
         let character: [Character] = [" "]
 
-        let anagram = sut.excludingСharacters(string, excluded: character)
+        let anagram = sut.ignoredCharacters(string, excluded: character)
 
         XCTAssertEqual(anagram, string)
-        XCTAssertNotNil(anagram, "function 'excludingСharacters' returned nill empty string")
+        XCTAssertNotNil(anagram, "function 'ignoredCharacters' returned nil empty string")
     }
 
-    func testInputSinglCharacter() {
+    func testEnterOneSymbol() {
         let string = "R"
         let character: [Character] = ["R", "F", "T"]
 
-        let anagram = sut.excludingСharacters(string, excluded: character)
+        let anagram = sut.ignoredCharacters(string, excluded: character)
 
         XCTAssertIdentical(anagram as AnyObject, string as AnyObject)
-        XCTAssertNotNil(anagram, "function returned nill")
+        XCTAssertNotNil(anagram, "function returned nil")
     }
 
-    func testInputSinglWordAndExcludingTwoCharacters() {
+    func testEnterOneWordAndIgnoredTwoCharacters() {
         let string = "Foxminded"
         let character: [Character] = ["F", "n", "x"]
         let result = "Fdxednimo"
 
-        let anagram = sut.excludingСharacters(string, excluded: character)
+        let anagram = sut.ignoredCharacters(string, excluded: character)
 
         XCTAssertEqual(anagram, result)
     }
 
-    func testEmptyStrngDefaultExcluding() {
+    func testEmptyStringDefaultExcluding() {
         let string = ""
 
-        let anagram = sut.defaultExcuding(string: string)
+        let anagram = sut.defaultException(string: string)
 
-        XCTAssertNotNil(anagram, "function 'DefaultExcluding' returned nill empty string")
+        XCTAssertNotNil(anagram, "function 'DefaultExcluding' returned nil empty string")
         XCTAssertEqual(anagram, string)
     }
 
-    func testInputSinglWordInDefaultExcluding() {
+    func testEnterOneWordInDefaultExcluding() {
         let string = "3+2-1"
         let defaultResult = "3+2-1"
 
-        let anagram = sut.defaultExcuding(string: string)
+        let anagram = sut.defaultException(string: string)
 
         XCTAssertEqual(anagram, defaultResult)
     }
@@ -74,7 +74,7 @@ class AnagramsUnitTest: XCTestCase {
         let stringManyWords = "Foxminded cool 24/7"
         let resultManyWords = "dednimxoF looc 24/7"
 
-        let anagram = sut.defaultExcuding(string: stringManyWords)
+        let anagram = sut.defaultException(string: stringManyWords)
 
         XCTAssertEqual(anagram, resultManyWords)
     }
@@ -83,7 +83,7 @@ class AnagramsUnitTest: XCTestCase {
         let string = "abcd efgh"
         let defaultResult = "dcba hgfe"
 
-        let anagram = sut.defaultExcuding(string: string)
+        let anagram = sut.defaultException(string: string)
 
         XCTAssertEqual(anagram, defaultResult)
     }
@@ -92,7 +92,7 @@ class AnagramsUnitTest: XCTestCase {
         let string = "a1bcd efg!h"
         let defaultResult = "d1cba hgf!e"
 
-        let anagram = sut.defaultExcuding(string: string)
+        let anagram = sut.defaultException(string: string)
 
         XCTAssertEqual(anagram, defaultResult)
     }
@@ -101,22 +101,22 @@ class AnagramsUnitTest: XCTestCase {
         let string = "Foxminded cool 24/7"
         let defaultResult = "Fdednimxo looc 24/7"
 
-        let anagram = sut.defaultExcuding(string: string)
+        let anagram = sut.defaultException(string: string)
 
         XCTAssertNotEqual(anagram, defaultResult)
     }
 
-    func testEmptyStrngInCustomCharacter() {
+    func testEmptyStringInCustomCharacter() {
         let string = ""
         let character = ""
 
         let anagram = sut.customCharacter(string: string, ignorCharacter: character)
 
-        XCTAssertNotNil(anagram, "function 'customCharacter' returned nill empty string")
+        XCTAssertNotNil(anagram, "function 'customCharacter' returned nil empty string")
         XCTAssertEqual(anagram, string)
     }
 
-    func testInputSinglWordInCustomCharacter() {
+    func testEnterOneWordInCustomCharacter() {
         let string = "Foxminded"
         let character = "Fnx"
         let result = "Fdxednimo"

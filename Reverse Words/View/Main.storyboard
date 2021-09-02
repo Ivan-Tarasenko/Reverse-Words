@@ -36,7 +36,7 @@
                                         <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="textFieldPressed:" destination="BYZ-38-t0r" eventType="editingChanged" id="vqi-aj-aLA"/>
+                                            <action selector="fieldForWordInput" destination="BYZ-38-t0r" eventType="editingChanged" id="1b5-Rv-UHU"/>
                                         </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1V-bh-tR0">
@@ -55,7 +55,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="reverseButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="aio-56-GCV"/>
+                                            <action selector="pressingReverseButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="aio-56-GCV"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse Words" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qJq-aX-FgI">
@@ -84,7 +84,7 @@
                                             <segment title="Hardcore"/>
                                         </segments>
                                         <connections>
-                                            <action selector="modeSwich" destination="BYZ-38-t0r" eventType="valueChanged" id="2qp-xQ-Yrv"/>
+                                            <action selector="segmentedControl" destination="BYZ-38-t0r" eventType="valueChanged" id="2qp-xQ-Yrv"/>
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All characters except alphabetic simbols" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KV-RZ-G7C">
@@ -102,7 +102,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="resultButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="GZ5-tB-gcr"/>
+                                            <action selector="pressingResultButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="GZ5-tB-gcr"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to ignor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GH9-AZ-2Zu">
@@ -111,7 +111,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
-                                            <action selector="textFieldIgnor" destination="BYZ-38-t0r" eventType="editingChanged" id="hng-iO-iBR"/>
+                                            <action selector="fieldForEnterIgnoredCharacters" destination="BYZ-38-t0r" eventType="editingChanged" id="RoP-Fv-W9r"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -176,7 +176,7 @@
                     <navigationItem key="navigationItem" title="Reverse Words" id="Qm8-Lc-7aY"/>
                     <connections>
                         <outlet property="alertsLabel" destination="1KV-RZ-G7C" id="wWs-Ur-s7E"/>
-                        <outlet property="inputFieldAnagrams" destination="GH9-AZ-2Zu" id="hp4-Wc-FGo"/>
+                        <outlet property="fieldWithIgnoredCharacters" destination="GH9-AZ-2Zu" id="hp4-Wc-FGo"/>
                         <outlet property="lineUnderTextField" destination="B1V-bh-tR0" id="ggR-Ir-e90"/>
                         <outlet property="resultButton" destination="Pp6-6N-sVH" id="og1-NF-ucZ"/>
                         <outlet property="resultLabel" destination="ejm-df-BMR" id="kLU-KQ-WWT"/>
