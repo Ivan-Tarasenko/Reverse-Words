@@ -50,7 +50,6 @@ class ViewController: UIViewController {
         textFieldDidBeginEditing(fieldWithIgnoredCharacters)
         func textFieldDidBeginEditing(_ textField: UITextField) {
             if segmented.selectedSegmentIndex == 2 {
-                resultLabel.text = fieldWithIgnoredCharacters.text
                 resultLabel.text = anagram.customCharacter(string: textInputField.text!,
                                                            ignorCharacter: fieldWithIgnoredCharacters.text!)
             }
@@ -144,7 +143,6 @@ class ViewController: UIViewController {
     // MARK: - Shows the text simultaneously with its input
     func showTextDuringInput() {
         if segmented.selectedSegmentIndex == 2 {
-            resultLabel.text = textInputField.text
             resultLabel.text = anagram.defaultException(string: textInputField.text!)
         }
     }

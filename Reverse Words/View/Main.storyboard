@@ -175,7 +175,6 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="MLU-Rl-lPq" firstAttribute="leading" secondItem="3Cv-v6-SMf" secondAttribute="leading" id="3Xq-w5-Pfv"/>
                                     <constraint firstAttribute="bottom" secondItem="MLU-Rl-lPq" secondAttribute="bottom" id="3hf-f0-l0P"/>

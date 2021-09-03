@@ -70,10 +70,10 @@ class Anagrams {
 
     // MARK: - Set Array default characters
     func setDefaultCharacters() -> [Character] {
-        let aScalars = "!".unicodeScalars
+        let aScalars = "\u{0020}".unicodeScalars
         let aCode = aScalars[aScalars.startIndex].value
 
-        let letters: [Character] = (0..<32).map {char in Character(UnicodeScalar(aCode + char)!)
+        let letters: [Character] = (0..<33).map {char in Character(UnicodeScalar(aCode + char)!)
         }
         return letters
     }
