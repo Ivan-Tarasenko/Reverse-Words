@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="00Z-9d-Q68">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -24,156 +24,179 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Reverse_Words" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLU-Rl-lPq">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Cv-v6-SMf">
+                                <rect key="frame" x="0.0" y="88" width="375" height="800"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text to reverse" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9UR-De-VhA">
-                                        <rect key="frame" x="13.666666666666657" y="311.66666666666669" width="343" height="28.666666666666686"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="InputWords"/>
-                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="fieldForWordInput" destination="BYZ-38-t0r" eventType="editingChanged" id="1b5-Rv-UHU"/>
-                                        </connections>
-                                    </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1V-bh-tR0">
-                                        <rect key="frame" x="16" y="351.33333333333331" width="343" height="1"/>
-                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLU-Rl-lPq">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse Words" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qJq-aX-FgI">
+                                                <rect key="frame" x="16" y="64" width="343" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="d0a-8A-eeu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="200"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" text="This application will reverse your words. Please type text below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tut-3I-kp2">
+                                                <rect key="frame" x="16" y="124.00000000000001" width="343" height="45.666666666666671"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45.5" id="u0N-eg-v4d"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="100"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text to reverse" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9UR-De-VhA">
+                                                <rect key="frame" x="16" y="209.66666666666669" width="343" height="46"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="InputWords"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="46" id="Uw3-eh-ca7"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="fieldForWordInput" destination="BYZ-38-t0r" eventType="editingChanged" id="1b5-Rv-UHU"/>
+                                                </connections>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B1V-bh-tR0">
+                                                <rect key="frame" x="16" y="255.66666666666669" width="343" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="Inn-F5-tn4"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Is Hiden Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ejm-df-BMR">
+                                                <rect key="frame" x="16" y="279.66666666666669" width="343" height="24.333333333333314"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24.5" id="6RL-mG-geI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="100"/>
+                                                <color key="textColor" systemColor="systemBlueColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JgU-RP-cvU">
+                                                <rect key="frame" x="16" y="334" width="343" height="32"/>
+                                                <segments>
+                                                    <segment title="Default"/>
+                                                    <segment title="Custom"/>
+                                                    <segment title="Hardcore"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="segmentedControl" destination="BYZ-38-t0r" eventType="valueChanged" id="2qp-xQ-Yrv"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All characters except alphabetic simbols" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1KV-RZ-G7C">
+                                                <rect key="frame" x="16" y="398" width="343" height="44.666666666666686"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44.5" id="msk-VB-TzH"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to ignor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GH9-AZ-2Zu">
+                                                <rect key="frame" x="16" y="404" width="343" height="38"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="FieldIgnorChar"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="fieldForEnterIgnoredCharacters" destination="BYZ-38-t0r" eventType="editingChanged" id="RoP-Fv-W9r"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pp6-6N-sVH">
+                                                <rect key="frame" x="16" y="492" width="343" height="56"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="ResultButton"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="17"/>
+                                                <state key="normal" title="Result">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pressingResultButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="GZ5-tB-gcr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wj1-pw-Tmh">
+                                                <rect key="frame" x="16" y="579" width="343" height="56"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="ReverseButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="sJz-pW-MfK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="17"/>
+                                                <state key="normal" title="Reverse">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pressingReverseButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="aio-56-GCV"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="BigView"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="0RA-NJ-PDK"/>
+                                            <constraint firstAttribute="trailing" secondItem="GH9-AZ-2Zu" secondAttribute="trailing" constant="16" id="0bt-my-pah"/>
+                                            <constraint firstItem="Tut-3I-kp2" firstAttribute="leading" secondItem="MLU-Rl-lPq" secondAttribute="leading" constant="16" id="3bL-H5-vwC"/>
+                                            <constraint firstItem="Pp6-6N-sVH" firstAttribute="top" secondItem="1KV-RZ-G7C" secondAttribute="bottom" constant="49.5" id="4On-U8-taf"/>
+                                            <constraint firstAttribute="trailing" secondItem="1KV-RZ-G7C" secondAttribute="trailing" constant="16" id="9HZ-N8-gGn"/>
+                                            <constraint firstAttribute="trailing" secondItem="B1V-bh-tR0" secondAttribute="trailing" constant="16" id="Chd-y8-hbL"/>
+                                            <constraint firstItem="B1V-bh-tR0" firstAttribute="leading" secondItem="MLU-Rl-lPq" secondAttribute="leading" constant="16" id="EkC-dl-N7v"/>
+                                            <constraint firstItem="Pp6-6N-sVH" firstAttribute="top" secondItem="GH9-AZ-2Zu" secondAttribute="bottom" constant="50" id="GCW-iz-bhJ"/>
+                                            <constraint firstItem="9UR-De-VhA" firstAttribute="top" secondItem="Tut-3I-kp2" secondAttribute="bottom" constant="40" id="KAu-cf-qky"/>
+                                            <constraint firstItem="Pp6-6N-sVH" firstAttribute="leading" secondItem="MLU-Rl-lPq" secondAttribute="leading" constant="16" id="KCn-Q3-5CL"/>
+                                            <constraint firstAttribute="trailing" secondItem="Tut-3I-kp2" secondAttribute="trailing" constant="16" id="NRV-Kk-wVM"/>
+                                            <constraint firstItem="9UR-De-VhA" firstAttribute="leading" secondItem="MLU-Rl-lPq" secondAttribute="leading" constant="16" id="Nkv-Ya-fOW"/>
+                                            <constraint firstItem="GH9-AZ-2Zu" firstAttribute="leading" secondItem="MLU-Rl-lPq" secondAttribute="leading" constant="16" id="PE3-2f-tQG"/>
+                                            <constraint firstAttribute="bottom" secondItem="Wj1-pw-Tmh" secondAttribute="bottom" constant="165" id="QQw-GG-iUz"/>
+                                            <constraint firstItem="GH9-AZ-2Zu" firstAttribute="top" secondItem="JgU-RP-cvU" secondAttribute="bottom" constant="39" id="Rfi-aN-DqW"/>
+                                            <constraint firstAttribute="trailing" secondItem="qJq-aX-FgI" secondAttribute="trailing" constant="16" id="S1j-wE-tFb"/>
+                                            <constraint firstItem="B1V-bh-tR0" firstAttribute="top" secondItem="9UR-De-VhA" secondAttribute="bottom" id="SLv-cV-7j4"/>
+                                            <constraint firstAttribute="trailing" secondItem="Wj1-pw-Tmh" secondAttribute="trailing" constant="16" id="STW-g1-uIe"/>
+                                            <constraint firstItem="Wj1-pw-Tmh" firstAttribute="leading" secondItem="MLU-Rl-lPq" secondAttribute="leading" constant="16" id="TA4-o4-QEJ"/>
+                                            <constraint firstItem="1KV-RZ-G7C" firstAttribute="top" secondItem="JgU-RP-cvU" secondAttribute="bottom" constant="33" id="W1N-R9-jYp"/>
+                                            <constraint firstItem="Pp6-6N-sVH" firstAttribute="height" secondItem="Wj1-pw-Tmh" secondAttribute="height" id="WhT-TJ-QiU"/>
+                                            <constraint firstItem="qJq-aX-FgI" firstAttribute="top" secondItem="MLU-Rl-lPq" secondAttribute="top" constant="64" id="XFw-dE-WcE"/>
+                                            <constraint firstAttribute="trailing" secondItem="JgU-RP-cvU" secondAttribute="trailing" constant="16" id="Y6k-nD-eha"/>
+                                            <constraint firstItem="Tut-3I-kp2" firstAttribute="top" secondItem="qJq-aX-FgI" secondAttribute="bottom" constant="16" id="dF6-1W-A7H"/>
+                                            <constraint firstItem="JgU-RP-cvU" firstAttribute="leading" secondItem="MLU-Rl-lPq" secondAttribute="leading" constant="16" id="duO-bE-LDC"/>
+                                            <constraint firstItem="qJq-aX-FgI" firstAttribute="leading" secondItem="MLU-Rl-lPq" secondAttribute="leading" constant="16" id="fdQ-Ty-EWR"/>
+                                            <constraint firstItem="ejm-df-BMR" firstAttribute="top" secondItem="B1V-bh-tR0" secondAttribute="bottom" constant="23" id="gWi-rm-Mls"/>
+                                            <constraint firstAttribute="trailing" secondItem="9UR-De-VhA" secondAttribute="trailing" constant="16" id="gcy-Qa-nSg"/>
+                                            <constraint firstItem="Wj1-pw-Tmh" firstAttribute="top" secondItem="Pp6-6N-sVH" secondAttribute="bottom" constant="31" id="oid-l7-hyl"/>
+                                            <constraint firstItem="JgU-RP-cvU" firstAttribute="top" secondItem="ejm-df-BMR" secondAttribute="bottom" constant="30" id="pDo-wH-sXf"/>
+                                            <constraint firstItem="ejm-df-BMR" firstAttribute="leading" secondItem="MLU-Rl-lPq" secondAttribute="leading" constant="16" id="uI8-RP-lZe"/>
+                                            <constraint firstAttribute="trailing" secondItem="Pp6-6N-sVH" secondAttribute="trailing" constant="16" id="v6S-oh-syj"/>
+                                            <constraint firstAttribute="trailing" secondItem="ejm-df-BMR" secondAttribute="trailing" constant="16" id="yAq-11-sHf"/>
+                                            <constraint firstItem="1KV-RZ-G7C" firstAttribute="leading" secondItem="MLU-Rl-lPq" secondAttribute="leading" constant="16" id="yF2-HC-S6y"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wj1-pw-Tmh">
-                                        <rect key="frame" x="16" y="690" width="343" height="56"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="ReverseButton"/>
-                                        <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="17"/>
-                                        <state key="normal" title="Reverse">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pressingReverseButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="aio-56-GCV"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse Words" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qJq-aX-FgI">
-                                        <rect key="frame" x="80.666666666666671" y="152" width="213.66666666666663" height="41"/>
-                                        <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="200"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Is Hiden Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ejm-df-BMR">
-                                        <rect key="frame" x="13.666666666666657" y="376.66666666666669" width="343" height="33"/>
-                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="100"/>
-                                        <color key="textColor" systemColor="systemBlueColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This application will reverse your words. Please type text below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tut-3I-kp2">
-                                        <rect key="frame" x="6" y="209" width="362.33333333333331" height="43.666666666666657"/>
-                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="100"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JgU-RP-cvU">
-                                        <rect key="frame" x="16" y="447" width="343" height="32"/>
-                                        <segments>
-                                            <segment title="Default"/>
-                                            <segment title="Custom"/>
-                                            <segment title="Hardcore"/>
-                                        </segments>
-                                        <connections>
-                                            <action selector="segmentedControl" destination="BYZ-38-t0r" eventType="valueChanged" id="2qp-xQ-Yrv"/>
-                                        </connections>
-                                    </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All characters except alphabetic simbols" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KV-RZ-G7C">
-                                        <rect key="frame" x="16" y="516" width="343" height="19"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pp6-6N-sVH">
-                                        <rect key="frame" x="16" y="615" width="343" height="56"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="ResultButton"/>
-                                        <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="17"/>
-                                        <state key="normal" title="Result">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="pressingResultButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="GZ5-tB-gcr"/>
-                                        </connections>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to ignor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GH9-AZ-2Zu">
-                                        <rect key="frame" x="16" y="508" width="343" height="34"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="FieldIgnorChar"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <action selector="fieldForEnterIgnoredCharacters" destination="BYZ-38-t0r" eventType="editingChanged" id="RoP-Fv-W9r"/>
-                                        </connections>
-                                    </textField>
                                 </subviews>
-                                <accessibility key="accessibilityConfiguration" identifier="BigView"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="1KV-RZ-G7C" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.112" constant="301" id="1M4-DO-Qa5"/>
-                                    <constraint firstItem="qJq-aX-FgI" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.570048" id="3Rk-hx-WC4"/>
-                                    <constraint firstItem="ejm-df-BMR" firstAttribute="top" secondItem="B1V-bh-tR0" secondAttribute="bottom" constant="24.329999999999998" id="3sL-mY-oa0"/>
-                                    <constraint firstItem="JgU-RP-cvU" firstAttribute="top" secondItem="ejm-df-BMR" secondAttribute="bottom" constant="37.333333333333314" id="AiB-We-AzF"/>
-                                    <constraint firstItem="qJq-aX-FgI" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="BcK-8h-mhq"/>
-                                    <constraint firstItem="Wj1-pw-Tmh" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0689655" id="BmN-Z0-mFL"/>
-                                    <constraint firstItem="9UR-De-VhA" firstAttribute="top" secondItem="Tut-3I-kp2" secondAttribute="bottom" constant="58.999999999999972" id="CJM-V1-HE0">
-                                        <variation key="heightClass=compact-widthClass=compact" constant="43"/>
-                                    </constraint>
-                                    <constraint firstItem="Tut-3I-kp2" firstAttribute="top" secondItem="qJq-aX-FgI" secondAttribute="bottom" constant="16" id="CVP-4w-6su"/>
-                                    <constraint firstItem="Wj1-pw-Tmh" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="Chs-gt-mQX"/>
-                                    <constraint firstItem="GH9-AZ-2Zu" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0418719" id="Ecx-qe-hzf"/>
-                                    <constraint firstItem="9UR-De-VhA" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" constant="-2.5" id="HMZ-y8-8D4"/>
-                                    <constraint firstItem="qJq-aX-FgI" firstAttribute="top" secondItem="MLU-Rl-lPq" secondAttribute="top" constant="152" id="Ho9-Og-PPG">
-                                        <variation key="heightClass=compact-widthClass=compact" constant="100"/>
-                                    </constraint>
-                                    <constraint firstItem="1KV-RZ-G7C" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="IS4-J8-UXS"/>
-                                    <constraint firstItem="9UR-De-VhA" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0270936" constant="6.8916240000000002" id="Ibk-Ca-mF8"/>
-                                    <constraint firstItem="JgU-RP-cvU" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0381773" id="JOO-dy-LXL"/>
-                                    <constraint firstItem="Wj1-pw-Tmh" firstAttribute="top" secondItem="Pp6-6N-sVH" secondAttribute="bottom" constant="19" id="K3O-r7-hk6"/>
-                                    <constraint firstItem="JgU-RP-cvU" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.914667" id="ME8-AL-Ml1"/>
-                                    <constraint firstItem="Pp6-6N-sVH" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0689655" id="Pmf-3B-oUa"/>
-                                    <constraint firstItem="Pp6-6N-sVH" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="Ql3-x3-4W2"/>
-                                    <constraint firstItem="B1V-bh-tR0" firstAttribute="top" secondItem="9UR-De-VhA" secondAttribute="bottom" constant="11" id="Rgv-dL-hPc"/>
-                                    <constraint firstItem="Wj1-pw-Tmh" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.914667" id="Rwh-eK-QL1"/>
-                                    <constraint firstItem="GH9-AZ-2Zu" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.0853333" constant="311.00001250000003" id="Spt-5h-kxA"/>
-                                    <constraint firstItem="Pp6-6N-sVH" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.914667" id="Wdd-03-f6L"/>
-                                    <constraint firstItem="B1V-bh-tR0" firstAttribute="width" secondItem="9UR-De-VhA" secondAttribute="width" id="XQc-Xm-nAm"/>
-                                    <constraint firstItem="ejm-df-BMR" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0270936" constant="10.891624" id="YSL-KH-u9K"/>
-                                    <constraint firstItem="JgU-RP-cvU" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="ZIT-3D-d5o"/>
-                                    <constraint firstItem="GH9-AZ-2Zu" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="ZJG-Yh-CNV"/>
-                                    <constraint firstItem="9UR-De-VhA" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.914667" id="awW-Ay-ilT"/>
-                                    <constraint firstItem="Wj1-pw-Tmh" firstAttribute="width" secondItem="Pp6-6N-sVH" secondAttribute="width" id="j8D-3c-rjI"/>
-                                    <constraint firstItem="qJq-aX-FgI" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0503686" id="jxo-Jy-Imt"/>
-                                    <constraint firstItem="Tut-3I-kp2" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.966222" id="miW-Ak-ero"/>
-                                    <constraint firstItem="1KV-RZ-G7C" firstAttribute="top" secondItem="JgU-RP-cvU" secondAttribute="bottom" constant="38" id="n31-v5-pes"/>
-                                    <constraint firstItem="B1V-bh-tR0" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" id="npc-lR-7AP"/>
-                                    <constraint firstItem="ejm-df-BMR" firstAttribute="width" secondItem="MLU-Rl-lPq" secondAttribute="width" multiplier="0.914667" id="oJ1-gO-4dn"/>
-                                    <constraint firstItem="1KV-RZ-G7C" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0258621" constant="-2.0000251999999996" id="pwz-4x-Pgr"/>
-                                    <constraint firstItem="GH9-AZ-2Zu" firstAttribute="top" secondItem="JgU-RP-cvU" secondAttribute="bottom" constant="30" id="rkF-VO-J3V"/>
-                                    <constraint firstAttribute="bottom" secondItem="Wj1-pw-Tmh" secondAttribute="bottom" constant="66" id="rsy-ha-wKj"/>
-                                    <constraint firstItem="Tut-3I-kp2" firstAttribute="height" secondItem="MLU-Rl-lPq" secondAttribute="height" multiplier="0.0537767" id="wLe-4A-2F1"/>
-                                    <constraint firstItem="Tut-3I-kp2" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" constant="-0.33333333333334281" id="wqv-c3-XyL"/>
-                                    <constraint firstItem="ejm-df-BMR" firstAttribute="centerX" secondItem="MLU-Rl-lPq" secondAttribute="centerX" constant="-2.5" id="yAf-pM-RNr"/>
+                                    <constraint firstItem="MLU-Rl-lPq" firstAttribute="leading" secondItem="3Cv-v6-SMf" secondAttribute="leading" id="3Xq-w5-Pfv"/>
+                                    <constraint firstAttribute="bottom" secondItem="MLU-Rl-lPq" secondAttribute="bottom" id="3hf-f0-l0P"/>
+                                    <constraint firstItem="MLU-Rl-lPq" firstAttribute="top" secondItem="3Cv-v6-SMf" secondAttribute="top" id="I81-LA-zXc"/>
+                                    <constraint firstAttribute="trailing" secondItem="MLU-Rl-lPq" secondAttribute="trailing" id="JMP-IH-bQL"/>
+                                    <constraint firstItem="MLU-Rl-lPq" firstAttribute="height" secondItem="3Cv-v6-SMf" secondAttribute="height" priority="250" id="X9Z-dR-Cyp"/>
+                                    <constraint firstItem="MLU-Rl-lPq" firstAttribute="width" secondItem="3Cv-v6-SMf" secondAttribute="width" id="x4A-Wh-9eU"/>
                                 </constraints>
-                            </view>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MLU-Rl-lPq" secondAttribute="trailing" id="4By-NU-OhG"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="MLU-Rl-lPq" secondAttribute="top" constant="88" id="MFY-p2-wfx"/>
-                            <constraint firstItem="MLU-Rl-lPq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="YMc-Vi-z2i"/>
-                            <constraint firstItem="MLU-Rl-lPq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mmj-mQ-PdR"/>
+                            <constraint firstItem="3Cv-v6-SMf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="88" id="mM9-SC-FVm"/>
+                            <constraint firstItem="3Cv-v6-SMf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ouD-Jm-ekg"/>
+                            <constraint firstItem="3Cv-v6-SMf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="88" id="qWi-AV-9X3"/>
+                            <constraint firstItem="3Cv-v6-SMf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yF9-wy-OOK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Reverse Words" id="Qm8-Lc-7aY"/>
+                    <size key="freeformSize" width="375" height="800"/>
                     <connections>
                         <outlet property="alertsLabel" destination="1KV-RZ-G7C" id="wWs-Ur-s7E"/>
                         <outlet property="fieldWithIgnoredCharacters" destination="GH9-AZ-2Zu" id="hp4-Wc-FGo"/>
@@ -187,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="933.60000000000002" y="67.980295566502463"/>
+            <point key="canvasLocation" x="930.9375" y="66.25"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZFF-JN-2QI">
@@ -196,7 +219,7 @@
                     <toolbarItems/>
                     <value key="contentSizeForViewInPopover" type="size" width="0.0" height="0.0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="R4L-ny-bkS">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
