@@ -42,8 +42,10 @@ class Anagrams {
         let string = string.split(separator: " ")
         let defaultCharacter = setDefaultCharacters()
         for word in string {
-            let excludingChar = ignoredCharacters(String(word),
-                                                     excluded: defaultCharacter)
+            let excludingChar = ignoredCharacters(
+                String(word),
+                excluded: defaultCharacter)
+
             arrayString.append(excludingChar)
             result = arrayString.joined(separator: " ")
         }
@@ -60,8 +62,10 @@ class Anagrams {
         var defaultCharacter: [Character] = []
         defaultCharacter += inputArrayString
         for word in string {
-            let excludingChar = ignoredCharacters(String(word),
-                                                             excluded: defaultCharacter)
+            let excludingChar = ignoredCharacters(
+                String(word),
+                excluded: defaultCharacter)
+
             arrayString.append(excludingChar)
             result = arrayString.joined(separator: " ")
         }

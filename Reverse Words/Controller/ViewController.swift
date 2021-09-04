@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         textInputField.delegate = self
         configButtonAndResultLabel()
+        addsTapTocSrollview()
     }
 
     // MARK: - Actions
@@ -50,8 +51,9 @@ class ViewController: UIViewController {
         textFieldDidBeginEditing(fieldWithIgnoredCharacters)
         func textFieldDidBeginEditing(_ textField: UITextField) {
             if segmented.selectedSegmentIndex == 2 {
-                resultLabel.text = anagram.customCharacter(string: textInputField.text!,
-                                                           ignorCharacter: fieldWithIgnoredCharacters.text!)
+                resultLabel.text = anagram.customCharacter(
+                    string: textInputField.text!,
+                    ignorCharacter: fieldWithIgnoredCharacters.text!)
             }
         }
     }
@@ -123,8 +125,9 @@ class ViewController: UIViewController {
         case 0:
             resultLabel.text = anagram.defaultException(string: textInputField.text!)
         case 1:
-            resultLabel.text = anagram.customCharacter(string: textInputField.text!,
-                                                       ignorCharacter: fieldWithIgnoredCharacters.text!)
+            resultLabel.text = anagram.customCharacter(
+                string: textInputField.text!,
+                ignorCharacter: fieldWithIgnoredCharacters.text!)
         default:
             break
         }
@@ -147,6 +150,13 @@ class ViewController: UIViewController {
         }
     }
 
+    // MARK: - Adds a tap on the scrollview to hide the keyboard outside the textfield
+    private func addsTapTocSrollview() {
+        self.view.addGestureRecognizer(UITapGestureRecognizer(
+                                        target: self.view,
+                                        action: #selector(UIView.endEditing(_:))))
+    }
+
     // MARK: - Alert
     private func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -159,12 +169,6 @@ class ViewController: UIViewController {
 
 // MARK: - Extension for Text Field
 extension ViewController: UITextFieldDelegate {
-
-    // MARK: - Hide keyboard by clicking outside
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
 
     // MARK: - Input tracking
     func textFieldDidBeginEditing(_ textField: UITextField) {
