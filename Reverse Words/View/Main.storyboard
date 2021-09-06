@@ -31,7 +31,7 @@
                                 <rect key="frame" x="0.0" y="88" width="375" height="800"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLU-Rl-lPq">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="800"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="805.66666666666663"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse Words" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qJq-aX-FgI">
                                                 <rect key="frame" x="16" y="64" width="343" height="44"/>
@@ -70,17 +70,17 @@
                                                     <constraint firstAttribute="height" constant="1" id="Inn-F5-tn4"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Is Hiden Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ejm-df-BMR">
-                                                <rect key="frame" x="16" y="279.66666666666669" width="343" height="24.333333333333314"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="24.5" id="6RL-mG-geI"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="100"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Is Hiden Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejm-df-BMR">
+                                                <rect key="frame" x="16" y="279.66666666666669" width="343" height="30"/>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="25"/>
                                                 <color key="textColor" systemColor="systemBlueColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JgU-RP-cvU">
-                                                <rect key="frame" x="16" y="334" width="343" height="32"/>
+                                                <rect key="frame" x="16" y="339.66666666666669" width="343" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="31" id="Dds-en-FEj"/>
+                                                </constraints>
                                                 <segments>
                                                     <segment title="Default"/>
                                                     <segment title="Custom"/>
@@ -91,7 +91,7 @@
                                                 </connections>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All characters except alphabetic simbols" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1KV-RZ-G7C">
-                                                <rect key="frame" x="16" y="398" width="343" height="44.666666666666686"/>
+                                                <rect key="frame" x="16" y="403.66666666666669" width="343" height="44.333333333333314"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44.5" id="msk-VB-TzH"/>
                                                 </constraints>
@@ -100,7 +100,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to ignor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GH9-AZ-2Zu">
-                                                <rect key="frame" x="16" y="404" width="343" height="38"/>
+                                                <rect key="frame" x="16" y="409.66666666666669" width="343" height="38"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="FieldIgnorChar"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -109,7 +109,7 @@
                                                 </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pp6-6N-sVH">
-                                                <rect key="frame" x="16" y="492" width="343" height="56"/>
+                                                <rect key="frame" x="16" y="497.66666666666663" width="343" height="56"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="ResultButton"/>
                                                 <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="17"/>
@@ -121,7 +121,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wj1-pw-Tmh">
-                                                <rect key="frame" x="16" y="579" width="343" height="56"/>
+                                                <rect key="frame" x="16" y="584.66666666666663" width="343" height="56"/>
                                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="ReverseButton"/>
                                                 <constraints>
@@ -180,7 +180,7 @@
                                     <constraint firstAttribute="bottom" secondItem="MLU-Rl-lPq" secondAttribute="bottom" id="3hf-f0-l0P"/>
                                     <constraint firstItem="MLU-Rl-lPq" firstAttribute="top" secondItem="3Cv-v6-SMf" secondAttribute="top" id="I81-LA-zXc"/>
                                     <constraint firstAttribute="trailing" secondItem="MLU-Rl-lPq" secondAttribute="trailing" id="JMP-IH-bQL"/>
-                                    <constraint firstItem="MLU-Rl-lPq" firstAttribute="height" secondItem="3Cv-v6-SMf" secondAttribute="height" priority="250" id="X9Z-dR-Cyp"/>
+                                    <constraint firstItem="MLU-Rl-lPq" firstAttribute="height" secondItem="3Cv-v6-SMf" secondAttribute="height" priority="500" id="X9Z-dR-Cyp"/>
                                     <constraint firstItem="MLU-Rl-lPq" firstAttribute="width" secondItem="3Cv-v6-SMf" secondAttribute="width" id="x4A-Wh-9eU"/>
                                 </constraints>
                             </scrollView>

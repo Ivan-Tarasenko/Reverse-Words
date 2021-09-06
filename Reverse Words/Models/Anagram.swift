@@ -44,7 +44,8 @@ class Anagrams {
         for word in string {
             let excludingChar = ignoredCharacters(
                 String(word),
-                excluded: defaultCharacter)
+                excluded: defaultCharacter
+            )
 
             arrayString.append(excludingChar)
             result = arrayString.joined(separator: " ")
@@ -64,7 +65,8 @@ class Anagrams {
         for word in string {
             let excludingChar = ignoredCharacters(
                 String(word),
-                excluded: defaultCharacter)
+                excluded: defaultCharacter
+            )
 
             arrayString.append(excludingChar)
             result = arrayString.joined(separator: " ")

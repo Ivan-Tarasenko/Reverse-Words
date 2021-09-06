@@ -48,14 +48,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func fieldForEnterIgnoredCharacters() {
-        textFieldDidBeginEditing(fieldWithIgnoredCharacters)
-        func textFieldDidBeginEditing(_ textField: UITextField) {
-            if segmented.selectedSegmentIndex == 2 {
-                resultLabel.text = anagram.customCharacter(
-                    string: textInputField.text!,
-                    ignorCharacter: fieldWithIgnoredCharacters.text!)
-            }
-        }
+        showTextWhileEnteringIgnorChar()
     }
 
     // MARK: - Change button status
@@ -150,11 +143,22 @@ class ViewController: UIViewController {
         }
     }
 
+    // MARK: - Shows the text while entering ignored characters
+    private func showTextWhileEnteringIgnorChar() {
+        if segmented.selectedSegmentIndex == 2 {
+            resultLabel.text = anagram.customCharacter(
+                string: textInputField.text!,
+                ignorCharacter: fieldWithIgnoredCharacters.text!)
+        }
+    }
+
     // MARK: - Adds a tap on the scrollview to hide the keyboard outside the textfield
     private func addsTapTocSrollview() {
-        self.view.addGestureRecognizer(UITapGestureRecognizer(
-                                        target: self.view,
-                                        action: #selector(UIView.endEditing(_:))))
+        self.view.addGestureRecognizer(
+            UITapGestureRecognizer(
+                target: self.view,
+                action: #selector(UIView.endEditing(_:)))
+        )
     }
 
     // MARK: - Alert

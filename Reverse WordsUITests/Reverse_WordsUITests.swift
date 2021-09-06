@@ -33,6 +33,7 @@ class ReverseWordsUITests: XCTestCase {
 
         inputStringInTextField(string: stringTest)
         app.otherElements["BigView"].tap()
+        app.otherElements["BigView"].swipeUp()
         app.buttons["ReverseButton"].tap()
 
         XCTAssert(app.staticTexts["dednimxoF looc 7/42"].exists)
@@ -51,7 +52,8 @@ class ReverseWordsUITests: XCTestCase {
 
         app.segmentedControls.buttons["Custom"].tap()
         inputStringInTextField(string: stringTest)
-        pressedResultButton()
+        app.otherElements["BigView"].tap()
+        app.buttons["ResultButton"].tap()
         pressedIgnorTextField(string: ignoredChar)
         pressedResultButton()
 
@@ -93,11 +95,12 @@ class ReverseWordsUITests: XCTestCase {
 
     private func pressedIgnorTextField(string: String) {
         app.textFields["FieldIgnorChar"].tap()
-        app.textFields["FieldIgnorChar"].typeText("Foxminded")
+        app.textFields["FieldIgnorChar"].typeText(string)
     }
 
     private func pressedResultButton() {
         app.otherElements["BigView"].tap()
+        app.otherElements["BigView"].swipeUp()
         app.buttons["ResultButton"].tap()
     }
 }
