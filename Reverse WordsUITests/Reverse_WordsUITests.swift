@@ -25,34 +25,43 @@ class ReverseWordsUITests: XCTestCase {
 
         inputStringInTextField(string: stringTest)
         app.buttons["Return"].tap()
-
         XCTAssert(app.staticTexts["dednimxoF looc 7/42"].exists)
     }
 
     func testCheckingTheButtonOperationReverse() throws {
 
         inputStringInTextField(string: stringTest)
-        app.otherElements["BigView"].tap()
-        app.otherElements["BigView"].swipeUp()
+        app.staticTexts["LabelReverseWords"].tap()
         app.buttons["ReverseButton"].tap()
-
         XCTAssert(app.staticTexts["dednimxoF looc 7/42"].exists)
     }
 
-    func testCheckigTheButtonResultDefaultValue() throws {
+    func testClear() throws {
 
+        let stringEmpty = ""
+        inputStringInTextField(string: stringTest)
+        app.staticTexts["LabelReverseWords"].tap()
+        app.buttons["ReverseButton"].tap()
+        app.buttons["ReverseButton"].tap()
+        XCTAssertEqual(app.textFields["InputWords"].title, stringEmpty)
+        XCTAssertEqual(app.staticTexts["ResultLabel"].title, stringEmpty)
+    }
+
+    func testCheckingTheButtonResultDefaultValue() throws {
+
+        switchingCustomReverse()
         inputStringInTextField(string: stringTest)
         pressedResultButton()
-
         XCTAssert(app.staticTexts["dednimxoF looc 24/7"].exists)
 
     }
 
-    func testCheckigTheButtonResultForInputCustomCharacter() throws {
-
+    func testCheckingTheButtonResultForInputCustomCharacter() throws {
+        switchingCustomReverse()
         app.segmentedControls.buttons["Custom"].tap()
         inputStringInTextField(string: stringTest)
-        app.otherElements["BigView"].tap()
+        app.otherElements["BigViewTwo"].tap()
+        app.otherElements["BigViewTwo"].swipeUp()
         app.buttons["ResultButton"].tap()
         pressedIgnorTextField(string: ignoredChar)
         pressedResultButton()
@@ -61,7 +70,7 @@ class ReverseWordsUITests: XCTestCase {
     }
 
     func testRealTimeInputText() {
-
+        switchingCustomReverse()
         app.segmentedControls.buttons["Hardcore"].tap()
         inputStringInTextField(string: stringTest)
 
@@ -70,12 +79,11 @@ class ReverseWordsUITests: XCTestCase {
     }
 
     func testRealTimeInputTextAndInputIgnorCharacter() {
-
+        switchingCustomReverse()
         app.segmentedControls.buttons["Hardcore"].tap()
         inputStringInTextField(string: stringTest)
-        app.otherElements["BigView"].tap()
+        app.otherElements["BigViewTwo"].tap()
         pressedIgnorTextField(string: ignoredChar)
-        app.otherElements["BigView"].tap()
 
         XCTAssert(app.staticTexts["Foxminded looc 7/42"].exists)
     }
@@ -99,8 +107,13 @@ class ReverseWordsUITests: XCTestCase {
     }
 
     private func pressedResultButton() {
-        app.otherElements["BigView"].tap()
-        app.otherElements["BigView"].swipeUp()
+        app.staticTexts["LabelReverseWordsViewTwo"].tap()
+        app.otherElements["BigViewTwo"].swipeUp()
         app.buttons["ResultButton"].tap()
+    }
+
+    private func switchingCustomReverse() {
+        app.otherElements["BigView"].swipeUp()
+        app.buttons["CustomReverse"].tap()
     }
 }

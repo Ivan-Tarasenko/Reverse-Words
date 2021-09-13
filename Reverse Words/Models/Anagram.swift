@@ -37,48 +37,55 @@ class Anagrams {
 
     // MARK: - Ignoring default character
     func defaultException(string: String) -> String {
-        var result = ""
-        var arrayString: [String] = []
+
+        let arrayString: [String] = []
         let string = string.split(separator: " ")
         let defaultCharacter = setDefaultCharacters()
-        for word in string {
-            let excludingChar = ignoredCharacters(
-                String(word),
-                excluded: defaultCharacter
-            )
-
-            arrayString.append(excludingChar)
-            result = arrayString.joined(separator: " ")
-        }
-        return result
+        return reverseString(
+            string: string,
+            inputCharacters: defaultCharacter,
+            emptyArray: arrayString
+        )
     }
 
     // MARK: - Entering custom characters
     func customCharacter(string: String, ignorCharacter: String) -> String {
 
         let inputArrayString = Array(ignorCharacter)
-        var result = ""
-        var arrayString: [String] = []
+        let arrayString: [String] = []
         let string = string.split(separator: " ")
-        var defaultCharacter: [Character] = []
-        defaultCharacter += inputArrayString
+        var customCharacter: [Character] = []
+        customCharacter += inputArrayString
+        return reverseString(
+            string: string,
+            inputCharacters: customCharacter,
+            emptyArray: arrayString
+        )
+    }
+
+    // MARK: - The method expands the string with the exception of the specified characters
+    func reverseString(
+        string: [String.SubSequence],
+        inputCharacters: [Character],
+        emptyArray: [String]
+    ) -> String {
+
+        var emptyArray = emptyArray
+
         for word in string {
             let excludingChar = ignoredCharacters(
                 String(word),
-                excluded: defaultCharacter
+                excluded: inputCharacters
             )
-
-            arrayString.append(excludingChar)
-            result = arrayString.joined(separator: " ")
+            emptyArray.append(excludingChar)
         }
-        return result
+        return emptyArray.joined(separator: " ")
     }
 
     // MARK: - Set Array default characters
     func setDefaultCharacters() -> [Character] {
         let aScalars = "\u{0020}".unicodeScalars
         let aCode = aScalars[aScalars.startIndex].value
-
         let letters: [Character] = (0..<33).map {char in Character(UnicodeScalar(aCode + char)!)
         }
         return letters
