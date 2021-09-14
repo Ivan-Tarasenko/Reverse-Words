@@ -70,8 +70,8 @@ class TwoViewController: UIViewController {
                 forFieldWithIgnoredCharacters: false,
                 forResultButton: true
             )
-            textInputField.text = ""
-            fieldWithIgnoredCharacters.text = ""
+            textInputField.text?.removeAll()
+            fieldWithIgnoredCharacters.text?.removeAll()
         }
     }
 
@@ -91,33 +91,41 @@ class TwoViewController: UIViewController {
     }
     // End Actions
 
+    // MARK: - Custom reverse words
+    func customReverse(inputString: String, customString: String, outString: UILabel) {
+        let customCharacters = anagram.setCustomCharacter(string: customString)
+        outString.text = anagram.reverse(string: inputString, ignored: customCharacters)
+    }
+
     // MARK: - The method is executed when the button is clicked in the default section
     func resultIfDefault() {
-        guard !textInputField.text!.isEmpty else {
+        guard !textInputField.string.isEmpty else {
             showAlert(title: "Attention", message: "Please enter the words")
             return
         }
-        resultLabel.text = anagram.defaultException(string: textInputField.text!)
+        resultLabel.text = anagram.reversedWithDefaultRules(string: textInputField.string)
     }
 
     // MARK: - The method is executed when the button is clicked in the user settings section
     func resultIfCustom() {
-        guard !textInputField.text!.isEmpty else {
+        guard !textInputField.string.isEmpty else {
             showAlert(title: "Attention", message: "Please enter the words")
             return
         }
-        resultLabel.text = anagram.customCharacter(
-            string: textInputField.text!,
-            ignorCharacter: fieldWithIgnoredCharacters.text!
+        customReverse(
+            inputString: textInputField.string,
+            customString: fieldWithIgnoredCharacters.string,
+            outString: resultLabel
         )
     }
 
     // MARK: - Shows the text while entering ignored characters
     private func showTextWhileEnteringIgnorChar() {
         if segmented.selectedSegmentIndex == 2 {
-            resultLabel.text = anagram.customCharacter(
-                string: textInputField.text!,
-                ignorCharacter: fieldWithIgnoredCharacters.text!
+            customReverse(
+                inputString: textInputField.string,
+                customString: fieldWithIgnoredCharacters.string,
+                outString: resultLabel
             )
         }
     }
@@ -125,13 +133,13 @@ class TwoViewController: UIViewController {
     // MARK: - Shows the text simultaneously with its input
     func showTextDuringInput() {
         if segmented.selectedSegmentIndex == 2 {
-            resultLabel.text = anagram.defaultException(string: textInputField.text!)
+            resultLabel.text = anagram.reversedWithDefaultRules(string: textInputField.string)
         }
     }
 
     // MARK: - clearing fields
     private func clear() {
-        resultLabel.text = ""
+        resultLabel.text?.removeAll()
         textFieldDidEndEditing(textInputField)
     }
 
@@ -154,7 +162,7 @@ extension TwoViewController: UITextFieldDelegate {
     // MARK: - Input tracking
     func textFieldDidBeginEditing(_ textField: UITextField) {
         lineUnderTextField.backgroundColor = .systemBlue
-        textInputField.text!.isEmpty ?
+        textInputField.string.isEmpty ?
             (resultButton.alpha = buttonOff) :
             (resultButton.alpha = buttonOn)
     }
@@ -167,12 +175,13 @@ extension TwoViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
 
         if segmented.selectedSegmentIndex == 0 {
-            resultLabel.text = anagram.defaultException(string: textInputField.text!)
+            resultLabel.text = anagram.reversedWithDefaultRules(string: textInputField.string)
         } else
         if segmented.selectedSegmentIndex == 1 {
-            resultLabel.text = anagram.customCharacter(
-                string: textInputField.text!,
-                ignorCharacter: fieldWithIgnoredCharacters.text!
+            customReverse(
+                inputString: textInputField.string,
+                customString: fieldWithIgnoredCharacters.string,
+                outString: resultLabel
             )
         }
         return true

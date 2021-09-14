@@ -9,85 +9,77 @@ import Foundation
 
 class Anagrams {
 
-    func ignoredCharacters(_ input: String, excluded: [Character]) -> String {
-
-        var result = Array(input)
-        var charOne = 0
-        var charTwo = result.count - 1
-
-        while charOne < charTwo {
-            while charOne < charTwo && excluded.contains(result[charOne]) {
-                charOne += 1
-            }
-
-            while charOne < charTwo && excluded.contains(result[charTwo]) {
-                charTwo -= 1
-            }
-
-            guard charOne < charTwo else { break }
-
-            result.swapAt(charOne, charTwo)
-
-            charOne += 1
-            charTwo -= 1
-        }
-
-        return String(result)
-    }
+    let defaultIgnoreSet = CharacterSet.letters.inverted // built-in character set
+    // я понял!!! эта переменная это и есть тот самый набор символов которые будут использоваться как дефолтные значени!
 
     // MARK: - Ignoring default character
-    func defaultException(string: String) -> String {
-
-        let arrayString: [String] = []
-        let string = string.split(separator: " ")
-        let defaultCharacter = setDefaultCharacters()
-        return reverseString(
-            string: string,
-            inputCharacters: defaultCharacter,
-            emptyArray: arrayString
-        )
+    func reversedWithDefaultRules(string: String) -> String {
+        return reverse(string: string, ignored: defaultIgnoreSet)
     }
 
-    // MARK: - Entering custom characters
-    func customCharacter(string: String, ignorCharacter: String) -> String {
-
-        let inputArrayString = Array(ignorCharacter)
-        let arrayString: [String] = []
-        let string = string.split(separator: " ")
-        var customCharacter: [Character] = []
-        customCharacter += inputArrayString
-        return reverseString(
-            string: string,
-            inputCharacters: customCharacter,
-            emptyArray: arrayString
-        )
+    /// Method returns expanded string with excluded characters.
+    /// - Parameters:
+    ///   - string: Input string to reverse.
+    ///   - ignored: Characters that the method ignores.
+    /// - Returns: Returns an expanded string with excluded characters.
+    func reverse(string: String, ignored: CharacterSet) -> String {
+        return string
+            .split(separator: " ")    // parses a string into separate words.
+            .map { reverse(word: $0, ignored: ignored) } /* expands the string
+             ignoring the characters specified in "defaultIgnoreSet".*/
+            .joined(separator: " ")  // gathers words into a string.
     }
 
-    // MARK: - The method expands the string with the exception of the specified characters
-    func reverseString(
-        string: [String.SubSequence],
-        inputCharacters: [Character],
-        emptyArray: [String]
-    ) -> String {
+    /// The method sorts the string into characters that match the list of excluded symbols and
+    ///  which characters are not in the list. Then it combines all the characters.
+    /// - Parameters:
+    ///   - word: Word separated from common string.
+    ///   - ignored: Exclusion symbols
+    /// - Returns: Returns a reversed string.
+    private func reverse(word: Substring, ignored: CharacterSet) -> String {
 
-        var emptyArray = emptyArray
-
-        for word in string {
-            let excludingChar = ignoredCharacters(
-                String(word),
-                excluded: inputCharacters
-            )
-            emptyArray.append(excludingChar)
+        var charactersArray = Array(word)
+        guard var begin = charactersArray.indices.first,
+              var end = charactersArray.indices.last,
+              end > begin
+        else {
+            return String(charactersArray)
         }
-        return emptyArray.joined(separator: " ")
+        while begin < end {
+            if ignored.checkIsSuperSet(for: charactersArray[begin]) {
+                begin += 1
+            } else if ignored.checkIsSuperSet(for: charactersArray[end]) {
+                end -= 1
+            } else {
+                charactersArray.swapAt(begin, end)
+                begin += 1
+                end -= 1
+            }
+        }
+        return String(charactersArray)
     }
 
-    // MARK: - Set Array default characters
-    func setDefaultCharacters() -> [Character] {
-        let aScalars = "\u{0020}".unicodeScalars
-        let aCode = aScalars[aScalars.startIndex].value
-        let letters: [Character] = (0..<33).map {char in Character(UnicodeScalar(aCode + char)!)
-        }
-        return letters
+    /// Converts a string to a character set.
+    /// - Parameters:
+    ///   - string: Input a string of ignored characters.
+    /// - Returns: Return charaacter set.
+
+    func setCustomCharacter(string: String) -> CharacterSet {
+        return CharacterSet(charactersIn: string)
+    }
+
+}
+
+// To simplify use
+extension CharacterSet {
+
+    /// An extension for characterSet that converts characters to unicode values and checks if
+    /// the input character is in this parameter or not.
+    /// - Parameters:
+    /// - forCharacter: Input character.
+    /// - Returns: Boolean value.
+
+    func checkIsSuperSet(for character: Character) -> Bool {
+        return character.unicodeScalars.allSatisfy(contains(_:))
     }
 }

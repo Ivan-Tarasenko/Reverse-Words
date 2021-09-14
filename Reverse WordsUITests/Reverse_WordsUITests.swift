@@ -60,7 +60,7 @@ class ReverseWordsUITests: XCTestCase {
         switchingCustomReverse()
         app.segmentedControls.buttons["Custom"].tap()
         inputStringInTextField(string: stringTest)
-        app.otherElements["BigViewTwo"].tap()
+        app.staticTexts["LabelReverseWordsViewTwo"].tap()
         app.otherElements["BigViewTwo"].swipeUp()
         app.buttons["ResultButton"].tap()
         pressedIgnorTextField(string: ignoredChar)

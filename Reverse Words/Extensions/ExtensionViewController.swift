@@ -35,7 +35,7 @@ extension UIViewController {
     func settingOfButton(button: UIButton, alpha: CGFloat, cornerRadius: CGFloat, label: UILabel) {
         button.layer.cornerRadius = cornerRadius
         button.alpha = alpha
-        label.text = ""
+        label.text?.removeAll()
 
     }
 }

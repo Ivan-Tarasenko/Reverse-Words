@@ -26,7 +26,7 @@ class ReverseWordsTests: XCTestCase {
         let stringInput = ""
         let stringOut = ""
 
-        let reverse = sut.reverseWords(text: stringInput)
+        let reverse = sut.reverseWords(string: stringInput)
 
         XCTAssertEqual(reverse, stringOut)
         XCTAssertNotNil(reverse, "function 'Rverse' returned nill empty string")
@@ -36,7 +36,7 @@ class ReverseWordsTests: XCTestCase {
         let stringInput = "Test"
         let stringOut = "tseT"
 
-        let reverse = sut.reverseWords(text: stringInput)
+        let reverse = sut.reverseWords(string: stringInput)
 
         XCTAssertEqual(stringOut, reverse )
     }
@@ -45,7 +45,7 @@ class ReverseWordsTests: XCTestCase {
         let stringInput = "Test string"
         let stringOut = "tseT gnirts"
 
-        let reverse = sut.reverseWords(text: stringInput)
+        let reverse = sut.reverseWords(string: stringInput)
 
         XCTAssertEqual(reverse, stringOut)
     }
@@ -54,7 +54,7 @@ class ReverseWordsTests: XCTestCase {
         let stringInput = "Test string"
         let stringOut = "tset gnirts"
 
-        let reverse = sut.reverseWords(text: stringInput)
+        let reverse = sut.reverseWords(string: stringInput)
 
         XCTAssertNotEqual(reverse, stringOut)
     }

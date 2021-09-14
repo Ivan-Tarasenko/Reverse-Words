@@ -18,6 +18,7 @@
 		1A483D5026CB418800B3B2A6 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A483D4F26CB418800B3B2A6 /* Model.swift */; };
 		1A50765926EB913600713BCC /* TwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A50765826EB913600713BCC /* TwoViewController.swift */; };
 		1A50765B26EC14E400713BCC /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A50765A26EC14E400713BCC /* ExtensionViewController.swift */; };
+		1A5360C526F042150010DE2C /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5360C426F042150010DE2C /* TextField.swift */; };
 		1A7593DE26D2889500851B23 /* Reverse_WordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7593DD26D2889500851B23 /* Reverse_WordsTests.swift */; };
 		1A7593EC26D28B5900851B23 /* Reverse_WordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7593EB26D28B5900851B23 /* Reverse_WordsUITests.swift */; };
 		1AA0412E26DBBD7600A3EECD /* Anagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA0412D26DBBD7600A3EECD /* Anagram.swift */; };
@@ -55,6 +56,7 @@
 		1A483D4F26CB418800B3B2A6 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		1A50765826EB913600713BCC /* TwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoViewController.swift; sourceTree = "<group>"; };
 		1A50765A26EC14E400713BCC /* ExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
+		1A5360C426F042150010DE2C /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		1A7593DB26D2889500851B23 /* Reverse WordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reverse WordsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7593DD26D2889500851B23 /* Reverse_WordsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reverse_WordsTests.swift; sourceTree = "<group>"; };
 		1A7593DF26D2889500851B23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		1A483D2D26CB3E6600B3B2A6 /* Reverse Words */ = {
 			isa = PBXGroup;
 			children = (
+				1A50765C26EDE92400713BCC /* Extensions */,
 				1A483D4226CB3EF000B3B2A6 /* Models */,
 				1A483D4326CB3F0900B3B2A6 /* View */,
 				1A483D4426CB3F2400B3B2A6 /* Controller */,
@@ -151,7 +154,6 @@
 		1A483D4926CB3FCB00B3B2A6 /* Support */ = {
 			isa = PBXGroup;
 			children = (
-				1A50765C26EDE92400713BCC /* Extensions */,
 				1A483D2E26CB3E6600B3B2A6 /* AppDelegate.swift */,
 				1A483D4A26CB401B00B3B2A6 /* Fonts */,
 				1A483D3726CB3E6600B3B2A6 /* Assets.xcassets */,
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				1A50765A26EC14E400713BCC /* ExtensionViewController.swift */,
+				1A5360C426F042150010DE2C /* TextField.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 				1AA0412E26DBBD7600A3EECD /* Anagram.swift in Sources */,
 				1A483D3326CB3E6600B3B2A6 /* ViewController.swift in Sources */,
 				1A483D2F26CB3E6600B3B2A6 /* AppDelegate.swift in Sources */,
+				1A5360C526F042150010DE2C /* TextField.swift in Sources */,
 				1A483D3126CB3E6600B3B2A6 /* SceneDelegate.swift in Sources */,
 				1A483D5026CB418800B3B2A6 /* Model.swift in Sources */,
 				1A50765926EB913600713BCC /* TwoViewController.swift in Sources */,
