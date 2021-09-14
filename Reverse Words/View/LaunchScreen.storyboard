@@ -1,88 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="SFProDisplay-Bold.ttf">
-            <string>SFProDisplay-Bold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="71s-Nz-vK4">
-                                <rect key="frame" x="36.5" y="66" width="247" height="190"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RGu-hp-6R2">
-                                        <rect key="frame" x="2.5" y="3.5" width="242" height="183"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Reverse" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6l7-VQ-Xhi">
-                                                <rect key="frame" x="50" y="20" width="142" height="52"/>
-                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="100"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Words" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rh2-xN-hRI">
-                                                <rect key="frame" x="-2" y="97" width="246" height="62"/>
-                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="200"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="6l7-VQ-Xhi" firstAttribute="top" secondItem="RGu-hp-6R2" secondAttribute="top" constant="20" id="06X-a9-35N"/>
-                                            <constraint firstItem="6l7-VQ-Xhi" firstAttribute="height" secondItem="RGu-hp-6R2" secondAttribute="height" multiplier="0.284153" id="65h-66-gus"/>
-                                            <constraint firstItem="6l7-VQ-Xhi" firstAttribute="width" secondItem="RGu-hp-6R2" secondAttribute="width" multiplier="0.587992" id="9AN-4h-i0M"/>
-                                            <constraint firstItem="6l7-VQ-Xhi" firstAttribute="centerX" secondItem="RGu-hp-6R2" secondAttribute="centerX" id="I0E-G2-fQS"/>
-                                            <constraint firstItem="Rh2-xN-hRI" firstAttribute="top" secondItem="6l7-VQ-Xhi" secondAttribute="bottom" constant="24.670000000000002" id="QvW-Eo-O5J"/>
-                                            <constraint firstItem="Rh2-xN-hRI" firstAttribute="height" secondItem="RGu-hp-6R2" secondAttribute="height" multiplier="0.3404" id="bs5-dv-CDn"/>
-                                            <constraint firstItem="Rh2-xN-hRI" firstAttribute="width" secondItem="RGu-hp-6R2" secondAttribute="width" multiplier="1.00235" constant="3.4354460093895796" id="fvF-sR-w0g"/>
-                                            <constraint firstItem="Rh2-xN-hRI" firstAttribute="centerX" secondItem="RGu-hp-6R2" secondAttribute="centerX" id="jJo-0D-bZ1"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                <constraints>
-                                    <constraint firstItem="RGu-hp-6R2" firstAttribute="width" secondItem="71s-Nz-vK4" secondAttribute="width" multiplier="0.977733" id="F8F-i8-9zu"/>
-                                    <constraint firstItem="RGu-hp-6R2" firstAttribute="centerX" secondItem="71s-Nz-vK4" secondAttribute="centerX" id="Ggv-j5-YDn"/>
-                                    <constraint firstItem="RGu-hp-6R2" firstAttribute="height" secondItem="71s-Nz-vK4" secondAttribute="height" multiplier="0.963158" id="PIc-nJ-7vj"/>
-                                    <constraint firstItem="RGu-hp-6R2" firstAttribute="centerY" secondItem="71s-Nz-vK4" secondAttribute="centerY" id="arW-aI-eEY"/>
-                                </constraints>
-                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="oje-B6-apV">
+                                <rect key="frame" x="37.666666666666657" y="169.66666666666663" width="300" height="300"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="71s-Nz-vK4" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.394866" id="5dX-v8-bvg"/>
-                            <constraint firstItem="71s-Nz-vK4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="BJp-4a-fE1"/>
-                            <constraint firstItem="71s-Nz-vK4" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-79" id="dTf-CA-Eut"/>
-                            <constraint firstItem="71s-Nz-vK4" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.772947" id="lv5-fX-mPW"/>
+                            <constraint firstItem="oje-B6-apV" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.8" id="XLu-ph-J2w"/>
+                            <constraint firstItem="oje-B6-apV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ybg-Ih-cGI"/>
+                            <constraint firstItem="oje-B6-apV" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-91.5" id="fEx-Yu-Gmx"/>
+                            <constraint firstItem="oje-B6-apV" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.369458" id="wel-gY-aGe"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50.399999999999999" y="373.15270935960592"/>
+            <point key="canvasLocation" x="48.75" y="372.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Icon" width="1024" height="1024"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

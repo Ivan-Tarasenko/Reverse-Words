@@ -20,93 +20,61 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textInputField.delegate = self
-        configButtonAndResultLabel()
+        addsTapToScrollview()
+        settingOfButton(
+            button: reverseButton,
+            alpha: buttonOff,
+            cornerRadius: 14,
+            label: resultLabel
+        )
     }
 
     // MARK: - Actions
-    @IBAction func textFieldPressed() {
-        textFieldDidBeginEditing(textInputField)
-    }
-    @IBAction func reverseButtonPressed() {
-        changingTheButton()
+    @IBAction func fieldForWordInput(_ sender: UITextField) {
+        textFieldDidBeginEditing(sender)
     }
 
-    // MARK: - Change button status
-    func changingTheButton() {
-        switch reverseButton.titleLabel?.text {
-        case "Reverse":
-         setIfbuttonTitleReverse()
-        case "Clear":
-           setIfbuttonTitleCrear()
-        default:
-            break
-        }
-    }
-
-    // MARK: - Set the condition for button "Reverse"
-    func setIfbuttonTitleReverse() {
-        resultLabel.text = reversingWords.reverseWords(text: textInputField.text!)
-        if textInputField.text == "" {
-            reverseButton.setTitle("Reverse", for: .normal)
+    @IBAction func pressingReverseButton(_ sender: UIButton) {
+        guard !textInputField.string.isEmpty else {
             showAlert(title: "Attention", message: "Please enter the words")
+            return
+        }
+        if resultLabel.text!.isEmpty {
+            resultLabel.text = reversingWords.reverseWords(string: textInputField.text!)
+            setTitleButton(button: sender, titleButton: "Clear")
         } else {
-            reverseButton.setTitle("Clear", for: .normal)
+            clear()
+            setTitleButton(button: sender, titleButton: "Reverse")
         }
     }
 
-    // MARK: - Set the condition for button "Clear"
-    func setIfbuttonTitleCrear() {
-        lineUnderTextField.backgroundColor = .systemGray5
-        textInputField.text = ""
-        reverseButton.setTitle("Reverse", for: .normal)
-        reverseButton.alpha = buttonOff
-        resultLabel.text = ""
-    }
-
-    // MARK: - Config button and label
-    func configButtonAndResultLabel() {
-        reverseButton.alpha = buttonOff
-        reverseButton.layer.cornerRadius = 14
-        resultLabel.text = ""
-    }
-    // MARK: - Alert
-    private func showAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
-        alert.addAction(okAction)
-        present(alert, animated: true)
+    // MARK: - clearing fields
+    private func clear() {
+        resultLabel.text?.removeAll()
+        textInputField.text?.removeAll()
+        textInputField.sendActions(for: .editingChanged)
+        textFieldDidEndEditing(textInputField)
     }
 }
 
-// MARK: - Extention for Text Field
+// MARK: - Extension for Text Field
 extension ViewController: UITextFieldDelegate {
-
-    // MARK: - Hide keyboard by clicking outside
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesBegan(touches, with: event)
-        view.endEditing(true)
-    }
 
     // MARK: - Input tracking
     func textFieldDidBeginEditing(_ textField: UITextField) {
         lineUnderTextField.backgroundColor = .systemBlue
-        if textInputField.text == "" {
-            reverseButton.alpha = buttonOff
-        } else {
-            reverseButton.alpha = buttonOn
-        }
-        if textInputField.text != "" {
-            reverseButton.setTitle("Reverse", for: .normal)
-        }
+        textInputField.string.isEmpty ?
+            (reverseButton.alpha = buttonOff) :
+            (reverseButton.alpha = buttonOn)
     }
     func textFieldDidEndEditing(_ textField: UITextField) {
         lineUnderTextField.backgroundColor = .systemGray5
     }
 
-    // MARK: - Excute on the button "Return"
+    // MARK: - Perform reverse by button "Return"
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        resultLabel.text = reversingWords.reverseWords(text: textInputField.text!)
-        if resultLabel.text != "" {
+        resultLabel.text = reversingWords.reverseWords(string: textInputField.text!)
+        if !resultLabel.text!.isEmpty {
             reverseButton.setTitle("Clear", for: .normal)
         }
         return true
