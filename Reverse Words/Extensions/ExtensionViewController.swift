@@ -32,10 +32,8 @@ extension UIViewController {
     }
 
     // MARK: - Initial settings of ui elements
-    func settingOfButton(button: UIButton, alpha: CGFloat, cornerRadius: CGFloat, label: UILabel) {
+    func settingOfButton(button: UIButton, alpha: CGFloat, cornerRadius: CGFloat) {
         button.layer.cornerRadius = cornerRadius
         button.alpha = alpha
-        label.text?.removeAll()
-
     }
 }

@@ -16,6 +16,8 @@ class TwoViewController: UIViewController {
     @IBOutlet weak var alertsLabel: UILabel!
     @IBOutlet weak var fieldWithIgnoredCharacters: UITextField!
     @IBOutlet weak var resultButton: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var fieldIgnorLayout: NSLayoutConstraint!
 
     private let buttonOn: CGFloat = 1
     private let buttonOff: CGFloat = 0.6
@@ -26,12 +28,10 @@ class TwoViewController: UIViewController {
         textInputField.delegate = self
         fieldWithIgnoredCharacters.delegate = self
         addsTapToScrollview()
-
         settingOfButton(
             button: resultButton,
             alpha: buttonOff,
-            cornerRadius: 14,
-            label: resultLabel
+            cornerRadius: 14
         )
 
         setBoolForUIElements(
@@ -71,7 +71,7 @@ class TwoViewController: UIViewController {
                 forResultButton: true
             )
             textInputField.text?.removeAll()
-            fieldWithIgnoredCharacters.text?.removeAll()
+            fieldWithIgnoredCharacters.string.removeAll()
         }
     }
 
@@ -139,7 +139,7 @@ class TwoViewController: UIViewController {
 
     // MARK: - clearing fields
     private func clear() {
-        resultLabel.text?.removeAll()
+        resultLabel.labelText.removeAll()
         textFieldDidEndEditing(textInputField)
     }
 

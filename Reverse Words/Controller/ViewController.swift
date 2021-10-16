@@ -24,9 +24,9 @@ class ViewController: UIViewController {
         settingOfButton(
             button: reverseButton,
             alpha: buttonOff,
-            cornerRadius: 14,
-            label: resultLabel
+            cornerRadius: 14
         )
+        
     }
 
     // MARK: - Actions
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
             showAlert(title: "Attention", message: "Please enter the words")
             return
         }
-        if resultLabel.text!.isEmpty {
+        if resultLabel.labelText.isEmpty {
             resultLabel.text = reversingWords.reverseWords(string: textInputField.text!)
             setTitleButton(button: sender, titleButton: "Clear")
         } else {
@@ -50,8 +50,8 @@ class ViewController: UIViewController {
 
     // MARK: - clearing fields
     private func clear() {
-        resultLabel.text?.removeAll()
-        textInputField.text?.removeAll()
+        resultLabel.labelText.removeAll()
+        textInputField.string.removeAll()
         textInputField.sendActions(for: .editingChanged)
         textFieldDidEndEditing(textInputField)
     }
@@ -74,7 +74,7 @@ extension ViewController: UITextFieldDelegate {
     // MARK: - Perform reverse by button "Return"
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         resultLabel.text = reversingWords.reverseWords(string: textInputField.text!)
-        if !resultLabel.text!.isEmpty {
+        if !resultLabel.labelText.isEmpty {
             reverseButton.setTitle("Clear", for: .normal)
         }
         return true
