@@ -70,7 +70,7 @@ class TwoViewController: UIViewController {
                 forFieldWithIgnoredCharacters: false,
                 forResultButton: true
             )
-            textInputField.text?.removeAll()
+            textInputField.string.removeAll()
             fieldWithIgnoredCharacters.string.removeAll()
         }
     }
