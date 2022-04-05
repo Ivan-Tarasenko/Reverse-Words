@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uEs-xO-FsF">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Display-Light.otf">
+            <string>SFProDisplay-Light</string>
+        </array>
+        <array key="SFProDisplay-Bold.ttf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="SFProDisplay-Regular.ttf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Custom Reverse-->
+        <scene sceneID="HYw-L4-Ie7">
+            <objects>
+                <viewController id="uEs-xO-FsF" customClass="SecondViewController" customModule="Reverse_Words" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="T7t-uw-ONZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="ZU9-do-aUN">
+                                <rect key="frame" x="0.0" y="88" width="414" height="736"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kcd-TR-4wm">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="639"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse Words" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fGE-Ez-pgD">
+                                                <rect key="frame" x="16" y="64" width="382" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="pLM-Jl-qZy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="200"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.60000002384185791" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" text="This app will flip your words with exception characters. Please enter the text below" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000149011612" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xvz-sh-Rsp">
+                                                <rect key="frame" x="16" y="124" width="382" height="45.5"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="LabelReverseWordsViewTwo"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45.5" id="WgJ-Te-htl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="100"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text to reverse" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fae-4r-ADf">
+                                                <rect key="frame" x="16" y="209.5" width="382" height="46"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="InputWords"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="46" id="pJP-2v-FMG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                <connections>
+                                                    <action selector="fieldForWordInput:" destination="uEs-xO-FsF" eventType="editingChanged" id="zVa-dp-5LU"/>
+                                                </connections>
+                                            </textField>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="brZ-2w-USh">
+                                                <rect key="frame" x="16" y="255.5" width="382" height="1"/>
+                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="n2o-SR-Ua9"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lxw-nI-c3e">
+                                                <rect key="frame" x="16" y="279.5" width="382" height="31"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="ResultLabelViewTwo"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" priority="501" constant="31" id="OFF-oG-JOl"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="25"/>
+                                                <color key="textColor" systemColor="systemBlueColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All characters except alphabetic simbols" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000298023224" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jEn-e2-jev">
+                                                <rect key="frame" x="16" y="431" width="382" height="44.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44.5" id="dxU-6f-Er6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="30"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to ignor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tw9-MT-7Pz">
+                                                <rect key="frame" x="16" y="442" width="382" height="34"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="FieldIgnorChar"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                <connections>
+                                                    <action selector="fieldForEnterIgnoredCharacters:" destination="uEs-xO-FsF" eventType="editingChanged" id="Q0Y-g9-Pc5"/>
+                                                </connections>
+                                            </textField>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="752" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="uje-7t-n8D">
+                                                <rect key="frame" x="16" y="368" width="382" height="32"/>
+                                                <segments>
+                                                    <segment title="Default"/>
+                                                    <segment title="Custom"/>
+                                                    <segment title="Hardcore"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="segmentedControl:" destination="uEs-xO-FsF" eventType="valueChanged" id="oay-MS-pGa"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t4l-it-NI8">
+                                                <rect key="frame" x="16" y="562.5" width="382" height="56"/>
+                                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="ResultButton"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="L4v-a0-4eY"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="SFProDisplay-Light" family="SF Pro Display" pointSize="17"/>
+                                                <state key="normal" title="Result">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="pressingResultButton:" destination="uEs-xO-FsF" eventType="touchUpInside" id="Qda-Pg-sgu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="BigViewTwo"/>
+                                        <constraints>
+                                            <constraint firstItem="jEn-e2-jev" firstAttribute="leading" secondItem="Kcd-TR-4wm" secondAttribute="leading" constant="16" id="3r4-xb-mRk"/>
+                                            <constraint firstAttribute="trailing" secondItem="Lxw-nI-c3e" secondAttribute="trailing" constant="16" id="Ajc-Wk-G2u"/>
+                                            <constraint firstAttribute="trailing" secondItem="fGE-Ez-pgD" secondAttribute="trailing" constant="16" id="Bcg-nk-KR7"/>
+                                            <constraint firstAttribute="trailing" secondItem="Tw9-MT-7Pz" secondAttribute="trailing" constant="16" id="HL5-cV-8Tc"/>
+                                            <constraint firstItem="uje-7t-n8D" firstAttribute="leading" secondItem="Kcd-TR-4wm" secondAttribute="leading" constant="16" id="LLI-CI-3QR"/>
+                                            <constraint firstItem="brZ-2w-USh" firstAttribute="leading" secondItem="Kcd-TR-4wm" secondAttribute="leading" constant="16" id="Md9-7k-4v6"/>
+                                            <constraint firstAttribute="trailing" secondItem="brZ-2w-USh" secondAttribute="trailing" constant="16" id="Od1-1v-Rpn"/>
+                                            <constraint firstItem="Fae-4r-ADf" firstAttribute="top" secondItem="Xvz-sh-Rsp" secondAttribute="bottom" constant="40" id="OnG-fq-BfZ"/>
+                                            <constraint firstItem="fGE-Ez-pgD" firstAttribute="top" secondItem="Kcd-TR-4wm" secondAttribute="top" constant="64" id="SvG-V7-R8J"/>
+                                            <constraint firstItem="Xvz-sh-Rsp" firstAttribute="leading" secondItem="Kcd-TR-4wm" secondAttribute="leading" constant="16" id="UKi-GS-8aT"/>
+                                            <constraint firstItem="Tw9-MT-7Pz" firstAttribute="height" secondItem="Kcd-TR-4wm" secondAttribute="height" multiplier="0.0436644" constant="6.0984484000000023" id="VcI-7O-NV6"/>
+                                            <constraint firstAttribute="trailing" secondItem="t4l-it-NI8" secondAttribute="trailing" constant="16" id="Yjm-0u-ujA"/>
+                                            <constraint firstItem="brZ-2w-USh" firstAttribute="top" secondItem="Fae-4r-ADf" secondAttribute="bottom" id="Z2n-Fc-qzS"/>
+                                            <constraint firstItem="Lxw-nI-c3e" firstAttribute="top" secondItem="brZ-2w-USh" secondAttribute="bottom" constant="23" id="ZCg-PL-866"/>
+                                            <constraint firstItem="Fae-4r-ADf" firstAttribute="leading" secondItem="Kcd-TR-4wm" secondAttribute="leading" constant="16" id="ZKQ-Gr-Z4e"/>
+                                            <constraint firstItem="uje-7t-n8D" firstAttribute="top" secondItem="Lxw-nI-c3e" secondAttribute="bottom" constant="57.333333333333314" id="bnb-rd-Bra"/>
+                                            <constraint firstItem="fGE-Ez-pgD" firstAttribute="leading" secondItem="Kcd-TR-4wm" secondAttribute="leading" constant="16" id="dq7-Qx-RBG"/>
+                                            <constraint firstItem="t4l-it-NI8" firstAttribute="leading" secondItem="Kcd-TR-4wm" secondAttribute="leading" constant="16" id="f1t-X2-mba"/>
+                                            <constraint firstAttribute="trailing" secondItem="uje-7t-n8D" secondAttribute="trailing" constant="16" id="fgI-pe-KOB"/>
+                                            <constraint firstAttribute="trailing" secondItem="Fae-4r-ADf" secondAttribute="trailing" constant="16" id="lR5-iN-s49"/>
+                                            <constraint firstItem="uje-7t-n8D" firstAttribute="height" secondItem="Kcd-TR-4wm" secondAttribute="height" multiplier="0.0398116" constant="5.5603875999999985" id="lqA-Yd-TQJ"/>
+                                            <constraint firstItem="Xvz-sh-Rsp" firstAttribute="top" secondItem="fGE-Ez-pgD" secondAttribute="bottom" constant="16" id="nRD-2Q-MUb"/>
+                                            <constraint firstAttribute="bottom" secondItem="t4l-it-NI8" secondAttribute="bottom" constant="20.333333333333371" id="q9B-GG-GAA"/>
+                                            <constraint firstAttribute="trailing" secondItem="Xvz-sh-Rsp" secondAttribute="trailing" constant="16" id="uNf-2P-haq"/>
+                                            <constraint firstItem="Tw9-MT-7Pz" firstAttribute="leading" secondItem="Kcd-TR-4wm" secondAttribute="leading" constant="16" id="ums-oJ-F7z"/>
+                                            <constraint firstItem="Lxw-nI-c3e" firstAttribute="leading" secondItem="Kcd-TR-4wm" secondAttribute="leading" constant="16" id="vdm-fP-WCA"/>
+                                            <constraint firstItem="t4l-it-NI8" firstAttribute="top" secondItem="Tw9-MT-7Pz" secondAttribute="bottom" constant="86.666666666666629" id="wDQ-E7-Qzx"/>
+                                            <constraint firstItem="Tw9-MT-7Pz" firstAttribute="top" secondItem="uje-7t-n8D" secondAttribute="bottom" constant="43" id="xEZ-4P-Mzm"/>
+                                            <constraint firstAttribute="trailing" secondItem="jEn-e2-jev" secondAttribute="trailing" constant="16" id="xdO-hz-FaD"/>
+                                            <constraint firstItem="jEn-e2-jev" firstAttribute="top" secondItem="uje-7t-n8D" secondAttribute="bottom" constant="32" id="yHo-uS-ce0"/>
+                                            <constraint firstAttribute="bottom" secondItem="Tw9-MT-7Pz" secondAttribute="bottom" constant="163" id="yI4-H4-ANc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Kcd-TR-4wm" firstAttribute="top" secondItem="ZU9-do-aUN" secondAttribute="top" id="5tB-Us-PzL"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kcd-TR-4wm" secondAttribute="bottom" constant="97" id="9GC-TI-hcH"/>
+                                    <constraint firstItem="Kcd-TR-4wm" firstAttribute="width" secondItem="ZU9-do-aUN" secondAttribute="width" id="Ngj-Bx-Nhw"/>
+                                    <constraint firstItem="Kcd-TR-4wm" firstAttribute="height" secondItem="ZU9-do-aUN" secondAttribute="height" priority="500" constant="-97" id="dcn-bY-L4B"/>
+                                    <constraint firstItem="Kcd-TR-4wm" firstAttribute="leading" secondItem="ZU9-do-aUN" secondAttribute="leading" id="kBw-l1-8ie"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kcd-TR-4wm" secondAttribute="trailing" id="xcB-Cs-hKI"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C9s-Dg-utg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZU9-do-aUN" firstAttribute="bottom" secondItem="C9s-Dg-utg" secondAttribute="bottom" constant="88" id="HEh-os-rvC"/>
+                            <constraint firstItem="ZU9-do-aUN" firstAttribute="trailing" secondItem="C9s-Dg-utg" secondAttribute="trailing" id="STt-tB-KfQ"/>
+                            <constraint firstItem="ZU9-do-aUN" firstAttribute="top" secondItem="T7t-uw-ONZ" secondAttribute="top" constant="88" id="s3K-7p-2oy"/>
+                            <constraint firstItem="ZU9-do-aUN" firstAttribute="leading" secondItem="C9s-Dg-utg" secondAttribute="leading" id="vgC-tI-yaE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Custom Reverse" id="22J-aI-eh3"/>
+                    <size key="freeformSize" width="414" height="736"/>
+                    <connections>
+                        <outlet property="alertsLabel" destination="jEn-e2-jev" id="7XN-UT-cSD"/>
+                        <outlet property="fieldIgnorLayout" destination="yI4-H4-ANc" id="Zox-LG-1fC"/>
+                        <outlet property="fieldWithIgnoredCharacters" destination="Tw9-MT-7Pz" id="aQx-GM-dmJ"/>
+                        <outlet property="lineUnderTextField" destination="brZ-2w-USh" id="hN9-XZ-D0I"/>
+                        <outlet property="resultButton" destination="t4l-it-NI8" id="BT6-oE-YUX"/>
+                        <outlet property="resultLabel" destination="Lxw-nI-c3e" id="yn2-Qh-JfU"/>
+                        <outlet property="scrollView" destination="ZU9-do-aUN" id="5wK-ny-6rG"/>
+                        <outlet property="segmented" destination="uje-7t-n8D" id="hdG-0N-pTY"/>
+                        <outlet property="textInputField" destination="Fae-4r-ADf" id="bum-PM-bhq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2SB-vn-ycT" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1685.5072463768117" y="66.032608695652172"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
