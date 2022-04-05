@@ -1,0 +1,6 @@
+framework module Pods_Reverse_Words_Reverse_WordsUITests {
+  umbrella header "Pods-Reverse Words-Reverse WordsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
